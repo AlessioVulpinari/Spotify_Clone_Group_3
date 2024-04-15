@@ -1,2 +1,15 @@
 @import './partials/bootstrap-overrides';
-@import "../assets/css/circular-font.css";
+
+#container {
+    header {
+        min-width: 300px;
+    }
+
+    aside{
+        min-width: 250px;
+    }   
+}
+
+.bg-green {
+    background-color: #004537;
+}

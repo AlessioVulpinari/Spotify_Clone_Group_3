@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import "../assets/css/circular-font.css";
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11960,4 +11959,14 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+#container header {
+  min-width: 300px;
+}
+#container aside {
+  min-width: 250px;
+}
+
+.bg-green {
+  background-color: #004537;
 }/*# sourceMappingURL=index.css.map */
