@@ -11960,6 +11960,16 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  color: inherit;
+}
+
 #container header {
   min-width: 300px;
 }
@@ -11969,4 +11979,13 @@ textarea.form-control-lg {
 
 .bg-green {
   background-color: #004537;
+}
+
+.grey-text {
+  color: rgba(255, 255, 255, 0.6);
+  list-style: none;
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=index.css.map */
