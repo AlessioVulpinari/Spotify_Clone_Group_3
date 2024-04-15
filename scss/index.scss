@@ -1,2 +1,30 @@
-@import './partials/bootstrap-overrides';
-@import "../assets/css/circular-font.css";
+@import "./partials/bootstrap-overrides";
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+  color: inherit;
+}
+#container {
+  header {
+    min-width: 300px;
+  }
+
+  aside {
+    min-width: 250px;
+  }
+}
+
+.bg-green {
+  background-color: #004537;
+}
+
+.grey-text {
+  color: rgba(255, 255, 255, 0.6);
+  list-style: none;
+}
+a:hover {
+  color: rgba(255, 255, 255, 1);
+}
