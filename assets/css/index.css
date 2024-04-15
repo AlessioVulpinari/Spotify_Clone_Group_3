@@ -11977,6 +11977,10 @@ ul {
   min-width: 250px;
 }
 
+.bg-black-spotify {
+  background-color: #191414;
+}
+
 .bg-green {
   background-color: #004537;
 }
