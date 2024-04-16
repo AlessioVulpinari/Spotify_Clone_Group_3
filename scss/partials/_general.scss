@@ -1,4 +1,27 @@
 //left NAVBAR
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+  ul {
+    list-style: none;
+    color: inherit;
+    padding-left: 0.5rem;
+  }
+  a:hover {
+    color: $light;
+  }
+
+#navbar {
+    color: $mid-light;
+   
+    
+    .bg-green {
+        background-color: #004537;
+      }
+}
+
+
 #album-list {
     color: $mid-light;
     ul {
@@ -11,6 +34,7 @@
     h5 {
         font-size: 15px;
         font-weight: 500;
+        color: $light;
     }
     small {
         font-size: 12px;
@@ -25,6 +49,7 @@
     transition: background-color 0.3s ease; 
     &:hover {
         background-color: $dark;
+        color: inherit;
     }
     .album-link > div {
         flex-grow: 1;
@@ -116,10 +141,15 @@
     position: fixed;
     bottom: 0; 
     background-color: $dark;
-    color: white;
+    color: $mid-light;
     height: 100px;
     border-top: 1px solid $secondary;
 
+    img {
+        height: 60px;
+        width: 60px;
+        border-radius: 4px;
+    }
     //svg size 
     svg {
         height: 16px;
@@ -137,6 +167,9 @@
         &:hover{
             text-decoration: underline;
         }
+    }
+    h5 {
+        color: $light;
     }
 }
 #footer-style {
@@ -171,6 +204,7 @@
     .play-btn{
         height: 35px;
         width: 35px;
+        color: $light;
     }
 }
 

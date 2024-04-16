@@ -1,16 +1,6 @@
 @import "./partials/bootstrap-overrides";
 @import "./partials/general";
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-ul {
-  list-style: none;
-  color: inherit;
-  padding-left: 0.5rem;
-}
-
 #container {
   display: flex;
   overflow-x: hidden;
@@ -33,14 +23,3 @@ ul {
   }
 }
 
-.bg-green {
-  background-color: #004537;
-}
-
-.grey-text {
-  color: rgba(255, 255, 255, 0.6);
-  list-style: none;
-}
-a:hover {
-  color: rgba(255, 255, 255, 1);
-}

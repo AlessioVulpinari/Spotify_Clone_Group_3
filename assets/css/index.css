@@ -11960,6 +11960,28 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  color: inherit;
+  padding-left: 0.5rem;
+}
+
+a:hover {
+  color: #f8f9fa;
+}
+
+#navbar {
+  color: #b2b2b2;
+}
+#navbar .bg-green {
+  background-color: #004537;
+}
+
 #album-list {
   color: #b2b2b2;
 }
@@ -11973,6 +11995,7 @@ textarea.form-control-lg {
 #album-list h5, #album-list .h5 {
   font-size: 15px;
   font-weight: 500;
+  color: #f8f9fa;
 }
 #album-list small, #album-list .small {
   font-size: 12px;
@@ -11988,6 +12011,7 @@ textarea.form-control-lg {
 }
 #album-list .album-link:hover {
   background-color: #121212;
+  color: inherit;
 }
 #album-list .album-link .album-link > div {
   flex-grow: 1;
@@ -12055,9 +12079,14 @@ textarea.form-control-lg {
   position: fixed;
   bottom: 0;
   background-color: #121212;
-  color: white;
+  color: #b2b2b2;
   height: 100px;
   border-top: 1px solid #252525;
+}
+#footer-style img {
+  height: 60px;
+  width: 60px;
+  border-radius: 4px;
 }
 #footer-style svg {
   height: 16px;
@@ -12074,6 +12103,9 @@ textarea.form-control-lg {
 }
 #footer-style small:hover, #footer-style .small:hover, #footer-style h5:hover, #footer-style .h5:hover {
   text-decoration: underline;
+}
+#footer-style h5, #footer-style .h5 {
+  color: #f8f9fa;
 }
 
 .progress {
@@ -12097,6 +12129,7 @@ textarea.form-control-lg {
 #songPlayerCenter .play-btn {
   height: 35px;
   width: 35px;
+  color: #f8f9fa;
 }
 
 aside svg {
@@ -12139,17 +12172,6 @@ aside .friends-activity span {
   max-width: 90%;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-  color: inherit;
-  padding-left: 0.5rem;
-}
-
 #container {
   display: flex;
   overflow-x: hidden;
@@ -12166,17 +12188,4 @@ ul {
 #container main {
   flex-grow: 1;
   overflow-x: hidden;
-}
-
-.bg-green {
-  background-color: #004537;
-}
-
-.grey-text {
-  color: rgba(255, 255, 255, 0.6);
-  list-style: none;
-}
-
-a:hover {
-  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=index.css.map */
