@@ -1,0 +1,145 @@
+//BUTTONS
+
+//previous next buttons
+@mixin round-btn {
+    border: 1px solid transparent;
+    background-color: $darker;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    margin-right: 10px;
+    
+    svg {
+        vertical-align: middle;
+        margin-bottom: 3px;
+    }
+}
+
+.btn-round {
+    @include round-btn()
+}
+
+//main buttons (play, ...)
+@mixin btn-main {
+    border-radius: 75px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0.8rem 2rem;
+}
+
+.btn-main {
+    @include btn-main()
+}
+
+//username composit button
+@mixin btn-username {
+    background-color: $darker;
+    color: $light;
+    &:hover {
+        background-color: $darker;
+        color: $light;
+        border: 1px solid transparent;
+    }
+    &:active {
+        outline: 1px solid transparent;
+        box-shadow: none;
+        background-color: $darker;
+    }
+    &:focus {
+        outline: 1px solid transparent;
+        box-shadow: none;
+        background-color: $darker;
+    }
+    &::after {
+        outline: 1px solid transparent;
+    }
+    
+}
+.bg-darker {
+    @include btn-username()  
+}
+
+//hide advertisments btn
+.btn-ads {
+    background-color: $light-gradient;
+    color: $secondary-emphasis;
+    border-radius: 20px;
+    font-size: small;
+    font-weight: 600;
+    padding-block: 0;
+    &:hover {
+        background-color: $light-gradient;
+        color: $light;
+        border: 1px solid transparent;
+    }
+}
+
+
+//FOOTER
+
+//general style
+@mixin footer-style {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: fixed;
+    bottom: 0; 
+    background-color: $dark;
+    color: white;
+    height: 100px;
+    border-top: 1px solid $secondary;
+
+    //svg size 
+    svg {
+        height: 16px;
+        width: 16px;
+    }
+    //interactive elements
+    svg, img, .progress {
+        cursor: pointer;
+    }
+    svg:hover{
+        transform: scale(1.1);
+    }
+    small, h5 {
+        cursor: pointer;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+#footer-style {
+    @include footer-style
+}
+
+//bar general stile
+@mixin player-bar {
+    height: 5px;
+}
+.progress {
+@include player-bar();
+}
+
+//central player (play, ...)
+@mixin player-center {
+    width: 500px;
+    span {
+        font-size: 12px;
+        color: $light;
+    }
+    svg {
+        height: 20px;
+        width: 20px;
+    }
+}
+#songPlayerCenter {
+    @include player-center();
+    .progress {
+        width: 100%;
+    }
+    .play-btn{
+        height: 35px;
+        width: 35px;
+    }
+}
