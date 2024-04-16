@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/dist/css/index.min.css" />
 </head>
 
-<body>
+<body class="bg-dark">
   <div class="d-flex" id="container">
     <header class="bg-black">
       <nav class="container grey-text">
@@ -105,6 +105,19 @@
         </ul>
         <hr>
       </nav>
+      <section id="album-list" class="container">
+        <ul>
+          <li>
+            <a href="#" class="album-link">
+              <img src="assets/imgs/search/image-2.jpg" alt="album art">
+              <div class="d-flex flex-column gap-1">
+                <h5 id="trackTitle" class="m-0">Album</h6>
+                  <small id="trackArtist" class="m-0">Artist</small>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
     </header>
 
     <main class="container flex-grow-1 bg-dark">
@@ -126,13 +139,15 @@
             </svg></button>
         </div>
         <div class="btn-group d-flex align-items-center">
-          <button class="btn rounded-start-pill bg-darker  d-flex align-items-center p-0 gap-2" type="button">
+          <button class="btn rounded-pill bg-darker d-flex align-items-center p-1 gap-2" type="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
             <img src="assets/imgs/main/image-12.jpg" alt="" class="rounded-circle m-0" style="width: 30px;">
             <p class="mb-0">Username</p>
-          </button>
-          <button type="button" class="btn dropdown-toggle dropdown-toggle-split rounded-end-pill bg-darker p-1"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="visually-hidden">Toggle Dropdown</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" style="margin-top: 3px;"
+              class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+              <path
+                d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+            </svg>
           </button>
           <ul class="dropdown-menu">
             <li>1</li>
@@ -140,6 +155,7 @@
             <li>3</li>
           </ul>
         </div>
+
       </div>
       <div id="hero" class="mt-2">
         <div class="container">
@@ -306,65 +322,90 @@
       </div>
     </main>
     <aside class="bg-black">
-      <div class="d-flex">
-        <h3 class="me-auto fs-6 text-white fw-bold">Attività amici</h3>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-add"
-          viewBox="0 0 16 16">
-          <path
-            d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
-          <path
-            d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
-          viewBox="0 0 16 16">
-          <path
-            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-        </svg>
+      <div class="d-flex justify-content-between align-items-center pt-2 ps-3">
+        <h3 class="fs-6 text-light fw-bold m-0">Attività amici</h3>
+        <div class="d-flex align-items-center justify-content-end gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
+            <path
+              d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+            <path
+              d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z" />
+          </svg>
+          <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI">
+            <path
+              d="M2.47 2.47a.75.75 0 0 1 1.06 0L8 6.94l4.47-4.47a.75.75 0 1 1 1.06 1.06L9.06 8l4.47 4.47a.75.75 0 1 1-1.06 1.06L8 9.06l-4.47 4.47a.75.75 0 0 1-1.06-1.06L6.94 8 2.47 3.53a.75.75 0 0 1 0-1.06Z">
+            </path>
+          </svg>
+        </div>
       </div>
-      <div class="container d-flex gap-5 flex-column mt-4">
+      <div class="container d-flex gap-4 flex-column mt-4">
         <div class="row">
-          <div class="elemento d-flex text-white">
+          <div class="friends-activity">
             <div class="col-2">
-              <img class="rounded-circle" style="width: 50%" src="./assets/imgs/main/image-1.jpg" />
+              <img class="rounded-circle" src="./assets/imgs/main/image-1.jpg" />
             </div>
             <div class="d-flex flex-column col-7">
-              <h6 class="mb-1">Charlie Hookham</h6>
-              <p class="mb-1">In Camera Yumi Zouma</p>
-              <p class="m-0">EP III</p>
+              <h6>Charlie Hookham</h6>
+              <p>In Camera • Yumi Zouma</p>
+              <div class="d-flex gap-2 align-items-center">
+                <p class="m-0">EP III</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-vinyl"
+                  viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                  <path d="M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0" />
+                  <path d="M9 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                </svg>
+              </div>
             </div>
-            <div class="col-3 text-center">
-              <p>4 ore</p>
+            <div class="col-3 text-start">
+              <span>4 ore</span>
             </div>
           </div>
         </div>
 
         <div class="row">
-          <div class="elemento d-flex text-white">
+          <div class="friends-activity">
             <div class="col-2">
-              <img class="rounded-circle" style="width: 50%" src="./assets/imgs/main/image-1.jpg" />
+              <img class="rounded-circle" src="./assets/imgs/main/image-1.jpg" />
             </div>
             <div class="d-flex flex-column col-7">
-              <h6 class="mb-1">Charlie Hookham</h6>
-              <p class="mb-1">In Camera Yumi Zouma</p>
-              <p class="m-0">EP III</p>
+              <h6>lightdark02</h6>
+              <p>Aimed to Kill • Jade LeMac</p>
+              <div class="d-flex gap-2 align-items-center">
+                <p class="m-0">Aimed to Kill</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+                  <path
+                    d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13s1.12-2 2.5-2 2.5.896 2.5 2m9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2" />
+                  <path fill-rule="evenodd" d="M14 11V2h1v9zM6 3v10H5V3z" />
+                  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4z" />
+                </svg>
+              </div>
             </div>
-            <div class="col-3 text-center">
-              <p>3 giorni</p>
+            <div class="col-3 text-start">
+              <span>3 ore</span>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="elemento d-flex text-white">
+          <div class="friends-activity">
             <div class="col-2">
-              <img class="rounded-circle" style="width: 50%" src="./assets/imgs/main/image-1.jpg" />
+              <img class="rounded-circle" src="./assets/imgs/main/image-1.jpg" />
             </div>
             <div class="d-flex flex-column col-7">
-              <h6 class="mb-1">Charlie Hookham</h6>
-              <p class="mb-1">In Camera Yumi Zouma</p>
-              <p class="m-0">EP III</p>
+              <h6>Valeria Traverso</h6>
+              <p>New Kings • Sleeping Wolf</p>
+              <div class="d-flex gap-2 align-items-center">
+                <p class="m-0">Twint Badass mood</p>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zM88 256H56c0-105.9 86.1-192 192-192v32c-88.2 0-160 71.8-160 160zm160 96c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z" />
+                </svg>
+              </div>
             </div>
-            <div class="col-3 text-center">
-              <p>8 ore</p>
+            <div class="col-3 text-start">
+              <span>8 ore</span>
             </div>
           </div>
         </div>
