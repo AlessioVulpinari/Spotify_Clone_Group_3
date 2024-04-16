@@ -11960,23 +11960,104 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+*,
+*::after,
+*::before {
+  font-family: "Circular";
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
 ul {
+  padding-left: 0;
   list-style: none;
   color: inherit;
 }
 
+nav svg {
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+#container {
+  max-height: 100vh;
+}
+#container header,
+#container main {
+  overflow: scroll;
+}
 #container header {
   min-width: 300px;
+  font-size: 0.8rem;
+}
+#container header ul li a {
+  vertical-align: middle;
+}
+#container header ul li a svg,
+#container header ul li a img {
+  margin-right: 0.5rem;
 }
 #container aside {
   min-width: 250px;
 }
 
+footer div:first-of-type > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 36px;
+  height: 36px;
+}
+footer div:first-of-type p {
+  font-weight: 300;
+  font-style: normal;
+  margin: 0px;
+}
+footer div:first-of-type p:first-of-type {
+  font-size: 0.8rem;
+}
+footer div:first-of-type p:nth-of-type(2) {
+  font-size: 0.6rem;
+  color: grey;
+}
+
+#playerBar .progress,
+#playerSettingIcons .progress {
+  height: 5px;
+  background-color: grey;
+}
+#playerBar .progress .progress-bar,
+#playerSettingIcons .progress .progress-bar {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#playerBar span {
+  font-size: 0.6rem;
+  color: grey;
+}
+
+@media screen and (min-width: 576px) {
+  #playerBar .progress {
+    width: 275px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #playerBar .progress {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #playerBar .progress {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #playerBar .progress {
+    width: 500px;
+    height: 5px;
+  }
+}
 .bg-black-spotify {
   background-color: #191414;
 }
@@ -11992,4 +12073,7 @@ ul {
 
 a:hover {
   color: rgb(255, 255, 255);
+}
+a:hover svg {
+  fill: rgb(255, 255, 255);
 }/*# sourceMappingURL=index.css.map */
