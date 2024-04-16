@@ -12030,8 +12030,8 @@ textarea.form-control-lg {
   border-top: 1px solid #252525;
 }
 #footer-style svg {
-  height: 20px;
-  width: 20px;
+  height: 16px;
+  width: 16px;
 }
 #footer-style svg, #footer-style img, #footer-style .progress {
   cursor: pointer;
@@ -12056,6 +12056,10 @@ textarea.form-control-lg {
 #songPlayerCenter span {
   font-size: 12px;
   color: #f8f9fa;
+}
+#songPlayerCenter svg {
+  height: 20px;
+  width: 20px;
 }
 #songPlayerCenter .progress {
   width: 100%;
