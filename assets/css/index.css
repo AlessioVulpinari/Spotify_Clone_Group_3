@@ -12092,16 +12092,22 @@ a:hover {
   height: 16px;
   width: 16px;
 }
-#footer-style svg, #footer-style img, #footer-style .progress {
+#footer-style svg,
+#footer-style img,
+#footer-style .progress {
   cursor: pointer;
 }
 #footer-style svg:hover {
   transform: scale(1.1);
 }
-#footer-style small, #footer-style .small, #footer-style h5, #footer-style .h5 {
+#footer-style small, #footer-style .small,
+#footer-style h5,
+#footer-style .h5 {
   cursor: pointer;
 }
-#footer-style small:hover, #footer-style .small:hover, #footer-style h5:hover, #footer-style .h5:hover {
+#footer-style small:hover, #footer-style .small:hover,
+#footer-style h5:hover,
+#footer-style .h5:hover {
   text-decoration: underline;
 }
 #footer-style h5, #footer-style .h5 {
@@ -12170,6 +12176,22 @@ aside .friends-activity span {
   font-size: 10px;
   vertical-align: top;
   max-width: 90%;
+}
+
+.content-box {
+  background-clip: content-box;
+}
+
+.height-300 {
+  height: 300px;
+}
+
+.text-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #container {

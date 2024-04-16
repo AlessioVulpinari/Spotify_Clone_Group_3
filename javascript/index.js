@@ -1,4 +1,5 @@
 const URL_DEEZER = "https://deezerdevs-deezer.p.rapidapi.com/search?q="
+const audioPlayer = document.getElementById("audio-output")
 
 const fetchAlbum = async function (artist) {
   const options = {
@@ -18,15 +19,15 @@ const fetchAlbum = async function (artist) {
   }
 }
 
-const createHorizontalCards = () => {
+const createHorizontalCards = (artist) => {
   const horizontalCardContainer = document.getElementById("horizontalCardContainer")
 
-  fetchAlbum("Eminem")
+  fetchAlbum(artist)
     .then((songs) => {
       const slicedSongs = songs.slice(0, 6)
       for (let i = 0; i < slicedSongs.length; i++) {
         const col = document.createElement("div")
-        col.classList.add("col")
+        col.classList.add("col", "content-box", "bg-secondary")
 
         const innerRow = document.createElement("div")
         innerRow.classList.add("row")
@@ -34,6 +35,7 @@ const createHorizontalCards = () => {
         const imgContainer = document.createElement("div")
         imgContainer.classList.add("col-4")
 
+        // Link all'album page anche qui?
         const albumImg = document.createElement("img")
         albumImg.classList.add("img-fluid")
         albumImg.src = slicedSongs[i].album.cover_medium
@@ -67,7 +69,10 @@ const createVerticalCards = (artist) => {
         col.classList.add("col")
 
         const card = document.createElement("div")
-        card.classList.add("card", "height-300")
+        card.classList.add("card", "height-300", "bg-secondary", "text-white")
+
+        const anchorImg = document.createElement("a")
+        anchorImg.href = `/album.html?id=${slicedSongs[i].album.id}`
 
         const img = document.createElement("img")
         img.classList.add("card-img-top")
@@ -77,20 +82,26 @@ const createVerticalCards = (artist) => {
         const cardBody = document.createElement("div")
         cardBody.classList.add("card-body")
 
+        const anchorTitle = document.createElement("a")
+        anchorTitle.href = `/album.html?id=${slicedSongs[i].album.id}`
+
         const title = document.createElement("h5")
-        title.classList.add("card-title")
+        title.classList.add("card-title", "text-2")
         title.innerText = slicedSongs[i].album.title
-        // dentro un ancora
-        /*/album.html?=id={slicedSong[i].album.id} */
 
-        const songName = document.createElement("p")
-        songName.classList.add("card-text", "text-2")
-        songName.innerText = slicedSongs[i].title
-        // Nome dell'artista //
+        const anchorArtist = document.createElement("a")
+        anchorArtist.href = `/artist.html?id=${slicedSongs[i].artist.id}`
 
-        card.appendChild(img)
-        cardBody.appendChild(title)
-        cardBody.appendChild(songName)
+        const artistName = document.createElement("p")
+        artistName.classList.add("card-text", "text-2")
+        artistName.innerText = slicedSongs[i].artist.name
+
+        anchorImg.appendChild(img)
+        card.appendChild(anchorImg)
+        anchorTitle.appendChild(title)
+        cardBody.appendChild(anchorTitle)
+        anchorArtist.appendChild(artistName)
+        cardBody.appendChild(anchorArtist)
         card.appendChild(cardBody)
         col.appendChild(card)
         verticalCardsContainer.appendChild(col)
@@ -99,9 +110,22 @@ const createVerticalCards = (artist) => {
     .catch((err) => console.log(err))
 }
 
+const playAudio = function (url) {
+  audioPlayer.src = url
+  audioPlayer.play()
+}
+
+const stopAudio = function () {
+  if (audioPlayer.paused !== true) {
+    audioPlayer.pause()
+  } else {
+    audioPlayer.play()
+  }
+}
+
 addEventListener("DOMContentLoaded", () => {
-  createHorizontalCards()
+  createHorizontalCards("Eminem")
   createVerticalCards("Ruggero dei Timidi")
   createVerticalCards("Ghali")
-  createVerticalCards("Gigi d'Alessio")
+  createVerticalCards("Billie Eilish")
 })
