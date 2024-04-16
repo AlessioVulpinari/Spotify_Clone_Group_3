@@ -80,10 +80,13 @@ const createVerticalCards = (artist) => {
         const title = document.createElement("h5")
         title.classList.add("card-title")
         title.innerText = slicedSongs[i].album.title
+        // dentro un ancora
+        /*/album.html?=id={slicedSong[i].album.id} */
 
         const songName = document.createElement("p")
         songName.classList.add("card-text", "text-2")
         songName.innerText = slicedSongs[i].title
+        // Nome dell'artista //
 
         card.appendChild(img)
         cardBody.appendChild(title)
