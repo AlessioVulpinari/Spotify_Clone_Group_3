@@ -1,4 +1,6 @@
 @import "./partials/bootstrap-overrides";
+@import "./partials/general";
+
 a {
   text-decoration: none;
   color: inherit;
@@ -16,10 +18,6 @@ ul {
   aside {
     min-width: 250px;
   }
-}
-
-.bg-black-spotify {
-  background-color: #191414;
 }
 
 .bg-green {
