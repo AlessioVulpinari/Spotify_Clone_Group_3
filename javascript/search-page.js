@@ -1,5 +1,30 @@
+function createStaticCards() {
+  const staticContainer = document.getElementById("genreStatic")
+  for (let i = 1; i <= 40; i++) {
+    const colCard = document.createElement("div")
+    colCard.classList.add("col-lg-3", "col-md-6", "col-sm-12", "mb-4")
+    const card = document.createElement("div")
+    card.classList.add("card", "m-2", "bg-dark", "grey-text", "rounded-sm")
+    const imgLink = document.createElement("a")
+    const img = document.createElement("img")
+    img.classList.add("img-fluid", "mb-1", "rounded-sm")
+    img.src = `assets/imgs/search/image-${i}.jpg`
+    img.alt = `Image ${i}`
+    imgLink.appendChild(img)
+    card.appendChild(imgLink)
+
+    colCard.appendChild(card)
+    staticContainer.appendChild(colCard)
+  }
+}
+
+window.addEventListener("DOMContentLoaded", createStaticCards)
+
 document.getElementById("searchForm").addEventListener("submit", function (event) {
   event.preventDefault()
+
+  const staticContainer = document.getElementById("genreStatic")
+  staticContainer.innerHTML = ""
 
   const inputForm = document.getElementById("artist")
   const textForm = inputForm.value
