@@ -1,124 +1,20 @@
 @import "./partials/bootstrap-overrides";
-*,
-*::after,
-*::before {
-  font-family: "Circular";
-}
-
 a {
   text-decoration: none;
   color: inherit;
 }
 ul {
-  padding-left: 0;
   list-style: none;
   color: inherit;
 }
 
-nav {
-  svg {
-    fill: rgba(255, 255, 255, 0.6);
-  }
-}
-
 #container {
-  max-height: 100vh;
-  header,
-  main {
-    overflow: scroll;
-  }
   header {
     min-width: 300px;
-    font-size: 0.8rem;
-
-    ul {
-      li {
-        a {
-          vertical-align: middle;
-          svg,
-          img {
-            margin-right: 0.5rem;
-          }
-        }
-      }
-    }
   }
 
   aside {
     min-width: 250px;
-  }
-}
-
-footer {
-  div:first-of-type {
-    > img {
-      object-fit: cover;
-      width: 36px;
-      height: 36px;
-    }
-    p {
-      font-weight: 300;
-      font-style: normal;
-      margin: 0px;
-    }
-    p:first-of-type {
-      font-size: 0.8rem;
-    }
-    p:nth-of-type(2) {
-      font-size: 0.6rem;
-      color: grey;
-    }
-  }
-}
-
-#playerBar,
-#playerSettingIcons {
-  .progress {
-    height: 5px;
-    background-color: grey;
-    .progress-bar {
-      background-color: rgb(255 255 255 / 0.8);
-    }
-  }
-}
-
-#playerBar {
-  span {
-    font-size: 0.6rem;
-    color: grey;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  #playerBar {
-    .progress {
-      width: 275px;
-    }
-  }
-}
-
-@media screen and (min-width: 768px) {
-  #playerBar {
-    .progress {
-      width: 350px;
-    }
-  }
-}
-
-@media screen and (min-width: 992px) {
-  #playerBar {
-    .progress {
-      width: 400px;
-    }
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  #playerBar {
-    .progress {
-      width: 500px;
-      height: 5px;
-    }
   }
 }
 
@@ -134,10 +30,6 @@ footer {
   color: rgba(255, 255, 255, 0.6);
   list-style: none;
 }
-
 a:hover {
   color: rgba(255, 255, 255, 1);
-  svg {
-    fill: rgba(255, 255, 255, 1);
-  }
 }
