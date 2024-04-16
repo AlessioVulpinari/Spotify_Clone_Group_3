@@ -15,7 +15,8 @@ ul {
   display: flex;
   overflow-x: hidden;
 
-  header, aside {
+  header,
+  aside {
     flex: 0 0 auto;
   }
 
@@ -43,4 +44,16 @@ ul {
 }
 a:hover {
   color: rgba(255, 255, 255, 1);
+}
+
+.height-300 {
+  height: 300px;
+}
+
+.text-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

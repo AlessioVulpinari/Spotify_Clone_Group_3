@@ -12154,7 +12154,8 @@ ul {
   display: flex;
   overflow-x: hidden;
 }
-#container header, #container aside {
+#container header,
+#container aside {
   flex: 0 0 auto;
 }
 #container header {
@@ -12179,4 +12180,16 @@ ul {
 
 a:hover {
   color: rgb(255, 255, 255);
+}
+
+.height-300 {
+  height: 300px;
+}
+
+.text-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }/*# sourceMappingURL=index.css.map */
