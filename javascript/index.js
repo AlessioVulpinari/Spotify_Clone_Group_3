@@ -37,28 +37,34 @@ function renderResults(results) {
   results.forEach(result => {
     const colCard = document.createElement("div")
     colCard.classList.add("col-lg-3", "col-md-6", "col-sm-12", "mb-4")
+
     const card = document.createElement("div")
     card.classList.add("card", "m-2", "bg-dark", "grey-text")
 
     const imgLink = document.createElement("a")
     imgLink.href = "#" // link pagina album qui
+
     const img = document.createElement("img")
     img.classList.add("img-fluid")
     img.src = result.album.cover_medium
     img.alt = result.album.title
-    card.appendChild(img)
+    imgLink.appendChild(img)
+    card.appendChild(imgLink)
 
     const titleLink = document.createElement("a")
-    titleLink.href = "#" //link pagina album
+    titleLink.href = "#" // link pagina album
     titleLink.textContent = result.title
+
     const title = document.createElement("h5")
     title.appendChild(titleLink)
     card.appendChild(title)
 
     const artistLink = document.createElement("a")
-    artistLink.href = "#" //link pagina artista
+    artistLink.href = "#" // link pagina artista
+    artistLink.textContent = result.artist.name
+
     const artistName = document.createElement("p")
-    artistName.textContent = result.artist.name
+    artistName.appendChild(artistLink)
     card.appendChild(artistName)
 
     const link = document.createElement("a")
