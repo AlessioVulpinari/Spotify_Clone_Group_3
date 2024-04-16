@@ -1,3 +1,37 @@
+//left NAVBAR
+#album-list {
+    color: $mid-light;
+    ul {
+        padding: 0;
+    }
+    img {
+        width: 45px;
+        border-radius: 4px;
+    }
+    h5 {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    small {
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .album-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+    padding: 0.8rem ; 
+    border-radius: 4px; 
+    transition: background-color 0.3s ease; 
+    &:hover {
+        background-color: $dark;
+    }
+    .album-link > div {
+        flex-grow: 1;
+    }
+    }
+}
+
 //BUTTONS
 
 //previous next buttons
@@ -35,25 +69,21 @@
 @mixin btn-username {
     background-color: $darker;
     color: $light;
+    border: 1px solid transparent;
     &:hover {
-        background-color: $darker;
         color: $light;
-        border: 1px solid transparent;
+        background-color: darken($secondary, 5%);
+        border: 1px solid $light;
     }
-    &:active {
-        outline: 1px solid transparent;
+    &:hover, &:active, &:focus {
+        color: $light;
+        outline: none;
         box-shadow: none;
+    }
+    .dropdown-menu {
         background-color: $darker;
+        border: none;
     }
-    &:focus {
-        outline: 1px solid transparent;
-        box-shadow: none;
-        background-color: $darker;
-    }
-    &::after {
-        outline: 1px solid transparent;
-    }
-    
 }
 .bg-darker {
     @include btn-username()  
@@ -141,5 +171,52 @@
     .play-btn{
         height: 35px;
         width: 35px;
+    }
+}
+
+//ASIDE
+
+aside {
+    svg {
+        height: 18px;
+        width: 18px;
+        fill: $secondary-emphasis;
+        cursor: pointer;
+    }
+    img {
+        width: 40px;
+        margin-left: 8px;
+    }
+    .friends-activity {
+     color: $mid-light;
+     padding: 0;
+     display: flex;
+     gap: 1rem;
+     align-items: top;
+
+     .friends-activity > div{
+    flex-shrink: 1;
+    width: 100%;
+     }
+
+     svg {
+        width: 14px;
+     }
+   
+     h6{
+        font-weight: 800;
+        font-size: 14px;
+     }
+     p{
+        font-size: 10px;
+        font-weight: 500;
+        padding-bottom: 0;
+        margin-bottom: 8px;
+     }
+     span {
+        font-size: 10px;
+        vertical-align: top; 
+        max-width: 90%;
+    }
     }
 }

@@ -11960,6 +11960,39 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+#album-list {
+  color: #b2b2b2;
+}
+#album-list ul {
+  padding: 0;
+}
+#album-list img {
+  width: 45px;
+  border-radius: 4px;
+}
+#album-list h5, #album-list .h5 {
+  font-size: 15px;
+  font-weight: 500;
+}
+#album-list small, #album-list .small {
+  font-size: 12px;
+  font-weight: 300;
+}
+#album-list .album-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+#album-list .album-link:hover {
+  background-color: #121212;
+}
+#album-list .album-link .album-link > div {
+  flex-grow: 1;
+}
+
 .btn-round {
   border: 1px solid transparent;
   background-color: rgba(0, 0, 0, 0.7607843137);
@@ -11983,24 +12016,21 @@ textarea.form-control-lg {
 .bg-darker {
   background-color: rgba(0, 0, 0, 0.7607843137);
   color: #f8f9fa;
-}
-.bg-darker:hover {
-  background-color: rgba(0, 0, 0, 0.7607843137);
-  color: #f8f9fa;
   border: 1px solid transparent;
 }
-.bg-darker:active {
-  outline: 1px solid transparent;
-  box-shadow: none;
-  background-color: rgba(0, 0, 0, 0.7607843137);
+.bg-darker:hover {
+  color: #f8f9fa;
+  background-color: #181818;
+  border: 1px solid #f8f9fa;
 }
-.bg-darker:focus {
-  outline: 1px solid transparent;
+.bg-darker:hover, .bg-darker:active, .bg-darker:focus {
+  color: #f8f9fa;
+  outline: none;
   box-shadow: none;
-  background-color: rgba(0, 0, 0, 0.7607843137);
 }
-.bg-darker::after {
-  outline: 1px solid transparent;
+.bg-darker .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.7607843137);
+  border: none;
 }
 
 .btn-ads {
@@ -12069,6 +12099,46 @@ textarea.form-control-lg {
   width: 35px;
 }
 
+aside svg {
+  height: 18px;
+  width: 18px;
+  fill: #5f5f5f;
+  cursor: pointer;
+}
+aside img {
+  width: 40px;
+  margin-left: 8px;
+}
+aside .friends-activity {
+  color: #b2b2b2;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  align-items: top;
+}
+aside .friends-activity .friends-activity > div {
+  flex-shrink: 1;
+  width: 100%;
+}
+aside .friends-activity svg {
+  width: 14px;
+}
+aside .friends-activity h6, aside .friends-activity .h6 {
+  font-weight: 800;
+  font-size: 14px;
+}
+aside .friends-activity p {
+  font-size: 10px;
+  font-weight: 500;
+  padding-bottom: 0;
+  margin-bottom: 8px;
+}
+aside .friends-activity span {
+  font-size: 10px;
+  vertical-align: top;
+  max-width: 90%;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -12077,13 +12147,25 @@ a {
 ul {
   list-style: none;
   color: inherit;
+  padding-left: 0.5rem;
 }
 
+#container {
+  display: flex;
+  overflow-x: hidden;
+}
+#container header, #container aside {
+  flex: 0 0 auto;
+}
 #container header {
   min-width: 300px;
 }
 #container aside {
   min-width: 250px;
+}
+#container main {
+  flex-grow: 1;
+  overflow-x: hidden;
 }
 
 .bg-green {
