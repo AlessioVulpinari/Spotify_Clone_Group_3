@@ -11,14 +11,6 @@
 // ../ serve a salire di un livello ogni volta che lo si usa
 
 // 2. Include any default variable overrides here
-$primary: #1DB954; //green spotify
-$darker: #000000c2; //darker color with transparency
-$secondary: #252525;
-$secondary-emphasis: #5f5f5f;
-$progress-bg: $secondary-emphasis; //progress bar override
-$light-gradient: #222; //lighter color of the gradient
-$dark: #121212; //dark spotify : it's also the dark color used in the gradient
-
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import '../../bootstrap/scss/variables';
