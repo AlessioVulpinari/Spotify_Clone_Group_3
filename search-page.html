@@ -26,12 +26,13 @@
     />
     <!-- fonts circular -->
     <link rel="stylesheet" href="/assets/css/circular-font.css" />
+    <link rel="stylesheet" href="assets/dist/css/index.min.css" />
     <link rel="stylesheet" href="assets/dist/css/search-page.min.css" />
   </head>
   <body>
     <div class="d-flex" id="container">
       <header class="bg-black">
-        <nav class="container grey-text">
+        <nav id="navbar" class="container">
           <ul>
             <li class="pb-2">
               <svg
@@ -48,65 +49,66 @@
               </svg>
             </li>
             <li class="pb-2">
-              <a href="#">
+              <a href="#" class="d-flex align-items-center gap-2 text-light">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
                   width="16"
                   height="16"
-                  fill="currentColor"
-                  class="bi bi-house-door"
-                  viewBox="0 0 16 16"
+                  fill="white"
+                  class="Svg-sc-ytk21e-0 bneLcE home-active-icon QbaKKdcHNA2x3_YJvpYu"
+                  viewBox="0 0 24 24"
                 >
                   <path
-                    d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"
-                  />
+                    d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"
+                  ></path>
                 </svg>
                 Home
               </a>
             </li>
             <li class="pb-2">
-              <a href="#">
+              <a href="#" class="d-flex align-items-center gap-2">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-search"
-                  viewBox="0 0 16 16"
+                  class="Svg-sc-ytk21e-0 bneLcE search-icon QbaKKdcHNA2x3_YJvpYu"
+                  viewBox="0 0 24 24"
                 >
                   <path
-                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
-                  />
+                    d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
+                  ></path>
                 </svg>
                 Cerca
               </a>
             </li>
             <li class="pb-2">
-              <a href="#">
+              <a href="#" class="d-flex align-items-center gap-2">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
+                  data-encore-id="icon"
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-music-note-list"
-                  viewBox="0 0 16 16"
+                  class="Svg-sc-ytk21e-0 bneLcE"
                 >
-                  <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2" />
-                  <path fill-rule="evenodd" d="M12 3v10h-1V3z" />
-                  <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1z" />
                   <path
-                    fill-rule="evenodd"
-                    d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5m0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5m0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5"
-                  />
+                    d="M14.5 2.134a1 1 0 0 1 1 0l6 3.464a1 1 0 0 1 .5.866V21a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1V3a1 1 0 0 1 .5-.866zM16 4.732V20h4V7.041l-4-2.309zM3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zm6 0a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1z"
+                  ></path>
                 </svg>
                 La tua libreria
               </a>
             </li>
           </ul>
-          <hr />
           <ul class="mt-2">
             <li class="pb-2">
-              <a href="#">
+              <a href="#" class="d-flex align-items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -126,7 +128,7 @@
               </a>
             </li>
             <li class="pb-2">
-              <a href="#"
+              <a href="#" class="d-flex align-items-center gap-2"
                 ><img
                   aria-hidden="true"
                   draggable="false"
@@ -146,7 +148,7 @@
               </a>
             </li>
             <li class="pb-2">
-              <a href="#">
+              <a href="#" class="d-flex align-items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -163,7 +165,21 @@
               </a>
             </li>
           </ul>
+          <hr />
         </nav>
+        <section id="album-list" class="container">
+          <ul>
+            <li>
+              <a href="#" class="album-link">
+                <img src="assets/imgs/search/image-2.jpg" alt="album art" />
+                <div class="d-flex flex-column gap-1">
+                  <h5 id="trackTitle" class="m-0">Album</h5>
+                  <small id="trackArtist" class="m-0">Artist</small>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
       </header>
 
       <main class="container flex-grow-1 bg-dark">
@@ -197,88 +213,120 @@
         </div>
         <div class="free-space"></div>
       </main>
+
       <aside class="bg-black">
-        <div class="d-flex">
-          <h3 class="me-auto fs-6 text-white fw-bold">Attività amici</h3>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-person-add"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
-            />
-            <path
-              d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-x"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
-            />
-          </svg>
+        <div class="d-flex justify-content-between align-items-center pt-2 ps-3">
+          <h3 class="fs-6 text-light fw-bold m-0">Attività amici</h3>
+          <div class="d-flex align-items-center justify-content-end gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="bi bi-person-add"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+              />
+              <path
+                d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"
+              />
+            </svg>
+            <svg
+              data-encore-id="icon"
+              role="img"
+              aria-hidden="true"
+              viewBox="0 0 16 16"
+              class="Svg-sc-ytk21e-0 dYnaPI"
+            >
+              <path
+                d="M2.47 2.47a.75.75 0 0 1 1.06 0L8 6.94l4.47-4.47a.75.75 0 1 1 1.06 1.06L9.06 8l4.47 4.47a.75.75 0 1 1-1.06 1.06L8 9.06l-4.47 4.47a.75.75 0 0 1-1.06-1.06L6.94 8 2.47 3.53a.75.75 0 0 1 0-1.06Z"
+              ></path>
+            </svg>
+          </div>
         </div>
-        <div class="container d-flex gap-5 flex-column mt-4">
+        <div class="container d-flex gap-4 flex-column mt-4">
           <div class="row">
-            <div class="elemento d-flex text-white">
+            <div class="friends-activity">
               <div class="col-2">
-                <img
-                  class="rounded-circle"
-                  style="width: 50%"
-                  src="./assets/imgs/main/image-1.jpg"
-                />
+                <img class="rounded-circle" src="./assets/imgs/main/image-1.jpg" />
               </div>
               <div class="d-flex flex-column col-7">
-                <h6 class="mb-1">Charlie Hookham</h6>
-                <p class="mb-1">In Camera Yumi Zouma</p>
-                <p class="m-0">EP III</p>
+                <h6>Charlie Hookham</h6>
+                <p>In Camera • Yumi Zouma</p>
+                <div class="d-flex gap-2 align-items-center">
+                  <p class="m-0">EP III</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-vinyl"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                    <path d="M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0" />
+                    <path d="M9 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                  </svg>
+                </div>
               </div>
-              <div class="col-3 text-center"><p>4 ore</p></div>
+              <div class="col-3 text-start">
+                <span>4 ore</span>
+              </div>
             </div>
           </div>
 
           <div class="row">
-            <div class="elemento d-flex text-white">
+            <div class="friends-activity">
               <div class="col-2">
-                <img
-                  class="rounded-circle"
-                  style="width: 50%"
-                  src="./assets/imgs/main/image-1.jpg"
-                />
+                <img class="rounded-circle" src="./assets/imgs/main/image-1.jpg" />
               </div>
               <div class="d-flex flex-column col-7">
-                <h6 class="mb-1">Charlie Hookham</h6>
-                <p class="mb-1">In Camera Yumi Zouma</p>
-                <p class="m-0">EP III</p>
+                <h6>lightdark02</h6>
+                <p>Aimed to Kill • Jade LeMac</p>
+                <div class="d-flex gap-2 align-items-center">
+                  <p class="m-0">Aimed to Kill</p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-music-note-beamed"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13s1.12-2 2.5-2 2.5.896 2.5 2m9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2"
+                    />
+                    <path fill-rule="evenodd" d="M14 11V2h1v9zM6 3v10H5V3z" />
+                    <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4z" />
+                  </svg>
+                </div>
               </div>
-              <div class="col-3 text-center"><p>3 giorni</p></div>
+              <div class="col-3 text-start">
+                <span>3 ore</span>
+              </div>
             </div>
           </div>
           <div class="row">
-            <div class="elemento d-flex text-white">
+            <div class="friends-activity">
               <div class="col-2">
-                <img
-                  class="rounded-circle"
-                  style="width: 50%"
-                  src="./assets/imgs/main/image-1.jpg"
-                />
+                <img class="rounded-circle" src="./assets/imgs/main/image-1.jpg" />
               </div>
               <div class="d-flex flex-column col-7">
-                <h6 class="mb-1">Charlie Hookham</h6>
-                <p class="mb-1">In Camera Yumi Zouma</p>
-                <p class="m-0">EP III</p>
+                <h6>Valeria Traverso</h6>
+                <p>New Kings • Sleeping Wolf</p>
+                <div class="d-flex gap-2 align-items-center">
+                  <p class="m-0">Twint Badass mood</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                    <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zM88 256H56c0-105.9 86.1-192 192-192v32c-88.2 0-160 71.8-160 160zm160 96c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z"
+                    />
+                  </svg>
+                </div>
               </div>
-              <div class="col-3 text-center"><p>8 ore</p></div>
+              <div class="col-3 text-start">
+                <span>8 ore</span>
+              </div>
             </div>
           </div>
         </div>

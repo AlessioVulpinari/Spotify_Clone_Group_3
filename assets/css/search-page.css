@@ -11968,6 +11968,240 @@ a {
 ul {
   list-style: none;
   color: inherit;
+  padding-left: 0.5rem;
+}
+
+a:hover {
+  color: #f8f9fa;
+}
+
+#navbar {
+  color: #b2b2b2;
+}
+#navbar .bg-green {
+  background-color: #004537;
+}
+
+#album-list {
+  color: #b2b2b2;
+}
+#album-list ul {
+  padding: 0;
+}
+#album-list img {
+  width: 45px;
+  border-radius: 4px;
+}
+#album-list h5, #album-list .h5 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #f8f9fa;
+}
+#album-list small, #album-list .small {
+  font-size: 12px;
+  font-weight: 300;
+}
+#album-list .album-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+#album-list .album-link:hover {
+  background-color: #121212;
+  color: inherit;
+}
+#album-list .album-link .album-link > div {
+  flex-grow: 1;
+}
+
+.btn-round {
+  border: 1px solid transparent;
+  background-color: rgba(0, 0, 0, 0.7607843137);
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  margin-right: 10px;
+}
+.btn-round svg {
+  vertical-align: middle;
+  margin-bottom: 3px;
+}
+
+.btn-main {
+  border-radius: 75px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+}
+
+.bg-darker {
+  background-color: rgba(0, 0, 0, 0.7607843137);
+  color: #f8f9fa;
+  border: 1px solid transparent;
+}
+.bg-darker:hover {
+  color: #f8f9fa;
+  background-color: #181818;
+  border: 1px solid #f8f9fa;
+}
+.bg-darker:hover, .bg-darker:active, .bg-darker:focus {
+  color: #f8f9fa;
+  outline: none;
+  box-shadow: none;
+}
+.bg-darker .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.7607843137);
+  border: none;
+}
+
+.btn-ads {
+  background-color: #222;
+  color: #5f5f5f;
+  border-radius: 20px;
+  font-size: small;
+  font-weight: 600;
+  padding-block: 0;
+}
+.btn-ads:hover {
+  background-color: #222;
+  color: #f8f9fa;
+  border: 1px solid transparent;
+}
+
+#footer-style {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  position: fixed;
+  bottom: 0;
+  background-color: #121212;
+  color: #b2b2b2;
+  height: 100px;
+  border-top: 1px solid #252525;
+}
+#footer-style img {
+  height: 60px;
+  width: 60px;
+  border-radius: 4px;
+}
+#footer-style svg {
+  height: 16px;
+  width: 16px;
+}
+#footer-style svg,
+#footer-style img,
+#footer-style .progress {
+  cursor: pointer;
+}
+#footer-style svg:hover {
+  transform: scale(1.1);
+}
+#footer-style small, #footer-style .small,
+#footer-style h5,
+#footer-style .h5 {
+  cursor: pointer;
+}
+#footer-style small:hover, #footer-style .small:hover,
+#footer-style h5:hover,
+#footer-style .h5:hover {
+  text-decoration: underline;
+}
+#footer-style h5, #footer-style .h5 {
+  color: #f8f9fa;
+}
+
+.progress {
+  height: 5px;
+}
+
+#songPlayerCenter {
+  width: 500px;
+}
+#songPlayerCenter span {
+  font-size: 12px;
+  color: #f8f9fa;
+}
+#songPlayerCenter svg {
+  height: 20px;
+  width: 20px;
+}
+#songPlayerCenter .progress {
+  width: 100%;
+}
+#songPlayerCenter .play-btn {
+  height: 35px;
+  width: 35px;
+  color: #f8f9fa;
+}
+
+aside svg {
+  height: 18px;
+  width: 18px;
+  fill: #5f5f5f;
+  cursor: pointer;
+}
+aside img {
+  width: 40px;
+  margin-left: 8px;
+}
+aside .friends-activity {
+  color: #b2b2b2;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  align-items: top;
+}
+aside .friends-activity .friends-activity > div {
+  flex-shrink: 1;
+  width: 100%;
+}
+aside .friends-activity svg {
+  width: 14px;
+}
+aside .friends-activity h6, aside .friends-activity .h6 {
+  font-weight: 800;
+  font-size: 14px;
+}
+aside .friends-activity p {
+  font-size: 10px;
+  font-weight: 500;
+  padding-bottom: 0;
+  margin-bottom: 8px;
+}
+aside .friends-activity span {
+  font-size: 10px;
+  vertical-align: top;
+  max-width: 90%;
+}
+
+.content-box {
+  background-clip: content-box;
+}
+
+.height-300 {
+  height: 300px;
+}
+
+.text-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  color: inherit;
 }
 
 #container header {
