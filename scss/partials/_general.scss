@@ -272,3 +272,11 @@ aside {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.transition {
+  transition: width 0.5s;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

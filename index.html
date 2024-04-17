@@ -169,8 +169,8 @@
               <a href="#" class="album-link">
                 <img src="assets/imgs/search/image-2.jpg" alt="album art" />
                 <div class="d-flex flex-column gap-1">
-                  <h5 id="trackTitle" class="m-0">Album</h5>
-                  <small id="trackArtist" class="m-0">Artist</small>
+                  <h5 class="m-0">Album</h5>
+                  <small class="m-0">Artist</small>
                 </div>
               </a>
             </li>
@@ -260,7 +260,7 @@
                   <p>Fedez, Salmo</p>
                   <p>Ascolta la nuova hit di Fedez e Salmo!</p>
                   <div class="d-flex gap-4 align-items-center">
-                    <button type="button" class="btn btn-primary btn-main">Play</button>
+                    <button type="button" class="btn btn-primary btn-main" id="playSalmo">Play</button>
                     <button type="button" class="btn btn-outline-light btn-main">Salva</button>
                     <a href="#"> <img src="/assets/imgs/icons/threeDotsIcon.svg" class="mx-1" style="width: 25px" /></a>
                   </div>
@@ -388,10 +388,10 @@
 
     <footer id="footer-style" class="container-fluid">
       <div id="playing-song" class="d-flex gap-3 align-items-center">
-        <img src="assets/imgs/search/image-1.jpeg" alt="album cover" />
+        <a id="coverLink"><img src="assets/imgs/search/image-1.jpeg" alt="album cover" id="trackCover" /></a>
         <div class="d-flex flex-column">
-          <h5 id=" trackTitle" class="m-0">Pasta</h5>
-          <small id="trackArtist" class="m-0">Eminem</small>
+          <a id="trackLink"><h5 id="trackTitle" class="m-0"></h5></a>
+          <a id="artistLink"><small id="trackArtist" class="m-0"></small></a>
         </div>
         <div class="d-flex align-items-center ms-2">
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
@@ -468,12 +468,11 @@
           </svg>
         </div>
         <div class="d-flex align-items-center justify-content-between gap-1">
-          <span class="starting-time inline">0:22</span>
-          <div id="player-bar"></div>
+          <span class="starting-time inline" id="startTime">0:00</span>
           <div class="progress" role="progressbar" aria-label="Basic example" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar" style="width: 25%"></div>
+            <div class="progress-bar transition" id="playerBar"></div>
           </div>
-          <span class="starting-time inline">3:47</span>
+          <span class="starting-time inline">0:30</span>
         </div>
       </div>
       <div id="playerSettingIcons" class="d-flex gap-3 align-items-center">
@@ -537,20 +536,6 @@
           <path d="M11.5 13.614a5.752 5.752 0 0 0 0-11.228v1.55a4.252 4.252 0 0 1 0 8.127v1.55z"></path>
         </svg>
 
-        <!-- VOLUME-BAR -->
-        <!-- 
-        <div
-          id="volume-bar"
-          class="progress"
-          role="progressbar"
-          aria-label="volume bar"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          style="width: 100px"
-        >
-          
-        </div>
-        -->
         <input type="range" name="volume" id="audioProgressBar" class="form-range" />
         <!-- SVG MINIMIZE -->
         <svg
@@ -573,7 +558,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="./javascript/index.js"></script>
     <script src="./javascript/player.js"></script>
+    <script src="./javascript/index.js"></script>
   </body>
 </html>

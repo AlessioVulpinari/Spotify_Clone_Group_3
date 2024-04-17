@@ -11,7 +11,6 @@ const fetchAlbum = async function (artist) {
   try {
     const response = await fetch(URL_DEEZER + artist, options)
     const result = await response.json()
-    console.log(result)
     return result.data
   } catch (error) {
     console.log(error)
@@ -43,12 +42,29 @@ const createHorizontalCards = (artist) => {
         const textContainer = document.createElement("div")
         textContainer.classList.add("col-8")
 
+        const anchorCard = document.createElement("a")
+        anchorCard.classList.add("cursor-pointer")
+
+        const albumInfo = {
+          preview: slicedSongs[i].preview,
+          cover: slicedSongs[i].album.cover_small,
+          songName: slicedSongs[i].title,
+          artist: slicedSongs[i].artist.name,
+          artistId: slicedSongs[i].artist.id,
+          albumId: slicedSongs[i].album.id,
+        }
+
+        anchorCard.addEventListener("click", () => {
+          loadNewSong(albumInfo)
+        })
+
         const text = document.createElement("h5")
         text.innerText = slicedSongs[i].title
 
         imgContainer.appendChild(albumImg)
         innerRow.appendChild(imgContainer)
-        textContainer.appendChild(text)
+        anchorCard.appendChild(text)
+        textContainer.appendChild(anchorCard)
         innerRow.appendChild(textContainer)
         col.appendChild(innerRow)
         horizontalCardContainer.appendChild(col)
