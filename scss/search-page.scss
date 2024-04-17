@@ -1,6 +1,6 @@
 @import "./partials/bootstrap-overrides";
 @import "./partials/general";
-@import "./index.scss";
+
 body {
   min-width: 100vh;
 }
@@ -39,4 +39,11 @@ a {
 .formCard {
   max-width: 270px;
   max-height: 400px;
+}
+.cardAnimation {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.cardAnimation:hover {
+  transform: scale(1.02);
 }
