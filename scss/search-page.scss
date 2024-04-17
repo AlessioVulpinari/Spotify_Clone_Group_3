@@ -1,0 +1,49 @@
+@import "./partials/bootstrap-overrides";
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+  color: inherit;
+}
+
+#container {
+  header {
+    min-width: 300px;
+  }
+
+  aside {
+    min-width: 250px;
+  }
+}
+
+.bg-black-spotify {
+  background-color: #191414;
+}
+
+.bg-green {
+  background-color: #004537;
+}
+
+.grey-text {
+  color: rgba(255, 255, 255, 0.6);
+  list-style: none;
+}
+a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+//search-page
+.transparent {
+  background-color: rgba(249, 249, 249, 0.605);
+}
+.card:hover {
+  box-shadow: 10px 11px 46px -6px rgba(0, 0, 0, 0.1);
+}
+.static-container {
+  width: 500px;
+
+  margin: 0 auto;
+}
