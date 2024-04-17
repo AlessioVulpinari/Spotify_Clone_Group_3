@@ -12000,9 +12000,139 @@ a:hover {
 
 .card:hover {
   box-shadow: 10px 11px 46px -6px rgba(0, 0, 0, 0.1);
+.btn-ads {
+  background-color: #222;
+  color: #5f5f5f;
+  border-radius: 20px;
+  font-size: small;
+  font-weight: 600;
+  padding-block: 0;
+}
+.btn-ads:hover {
+  background-color: #222;
+  color: #f8f9fa;
+  border: 1px solid transparent;
+}
+
+#footer-style {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  position: fixed;
+  bottom: 0;
+  background-color: #121212;
+  color: #b2b2b2;
+  height: 100px;
+  border-top: 1px solid #252525;
+}
+#footer-style img {
+  height: 60px;
+  width: 60px;
+  border-radius: 4px;
+}
+#footer-style svg {
+  height: 16px;
+  width: 16px;
+}
+#footer-style svg, #footer-style img, #footer-style .progress {
+  cursor: pointer;
+}
+#footer-style svg:hover {
+  transform: scale(1.1);
 }
 
 .static-container {
+#footer-style small, #footer-style .small, #footer-style h5, #footer-style .h5 {
+  cursor: pointer;
+}
+#footer-style small:hover, #footer-style .small:hover, #footer-style h5:hover, #footer-style .h5:hover {
+  text-decoration: underline;
+}
+#footer-style h5, #footer-style .h5 {
+  color: #f8f9fa;
+}
+
+.progress {
+  height: 5px;
+}
+
+#songPlayerCenter {
   width: 500px;
   margin: 0 auto;
 }/*# sourceMappingURL=search-page.css.map */
+}
+#songPlayerCenter span {
+  font-size: 12px;
+  color: #f8f9fa;
+}
+#songPlayerCenter svg {
+  height: 20px;
+  width: 20px;
+}
+#songPlayerCenter .progress {
+  width: 100%;
+}
+#songPlayerCenter .play-btn {
+  height: 35px;
+  width: 35px;
+  color: #f8f9fa;
+}
+
+aside svg {
+  height: 18px;
+  width: 18px;
+  fill: #5f5f5f;
+  cursor: pointer;
+}
+aside img {
+  width: 40px;
+  margin-left: 8px;
+}
+aside .friends-activity {
+  color: #b2b2b2;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  align-items: top;
+}
+aside .friends-activity .friends-activity > div {
+  flex-shrink: 1;
+  width: 100%;
+}
+aside .friends-activity svg {
+  width: 14px;
+}
+aside .friends-activity h6, aside .friends-activity .h6 {
+  font-weight: 800;
+  font-size: 14px;
+}
+aside .friends-activity p {
+  font-size: 10px;
+  font-weight: 500;
+  padding-bottom: 0;
+  margin-bottom: 8px;
+}
+aside .friends-activity span {
+  font-size: 10px;
+  vertical-align: top;
+  max-width: 90%;
+}
+
+#container {
+  display: flex;
+  overflow-x: hidden;
+}
+#container header, #container aside {
+  flex: 0 0 auto;
+}
+#container header {
+  min-width: 300px;
+}
+#container aside {
+  min-width: 250px;
+}
+#container main {
+  flex-grow: 1;
+  overflow-x: hidden;
+}/*# sourceMappingURL=index.css.map */
