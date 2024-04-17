@@ -25,7 +25,6 @@ document.getElementById("searchForm").addEventListener("submit", function (event
 
   const staticContainer = document.getElementById("genreStatic")
   staticContainer.innerHTML = ""
-
   const inputForm = document.getElementById("artist")
   const textForm = inputForm.value
   console.log(textForm)
@@ -44,9 +43,19 @@ document.getElementById("searchForm").addEventListener("submit", function (event
       return response.json()
     })
     .then(data => {
-      console.log(data)
-      const results = data.data
-      renderResults(results)
+      if (data && data.data && data.data.length > 0) {
+        const results = data.data
+        renderResults(results)
+      } else {
+        const inputForm = document.getElementById("artist")
+        const textForm = inputForm.value.trim()
+        if (textForm === "") {
+          createStaticCards()
+        } else {
+          const resultsContainer = document.getElementById("startCard")
+          resultsContainer.innerHTML = "<p>Nessun risultato trovato.</p>"
+        }
+      }
     })
     .catch(error => {
       console.error("Error:", error)
@@ -64,9 +73,9 @@ function renderResults(results) {
 
     const card = document.createElement("div")
     card.classList.add("card", "formCard", "m-1", "bg-dark", "grey-text", "p-3")
-
+    console.log(result)
     const imgLink = document.createElement("a")
-    imgLink.href = "#" // link pagina album qui
+    imgLink.href = `./album.html?id=${result.album.id}`
     const img = document.createElement("img")
     img.classList.add("img-fluid", "mb-1")
     img.src = result.album.cover_medium
@@ -75,14 +84,14 @@ function renderResults(results) {
     card.appendChild(imgLink)
 
     const titleLink = document.createElement("a")
-    titleLink.href = "#" // link pagina album
+    titleLink.href = `./album.html?id=${result.album.id}`
     titleLink.textContent = result.title
     const title = document.createElement("h5")
     title.appendChild(titleLink)
     card.appendChild(title)
 
     const artistLink = document.createElement("a")
-    artistLink.href = "#" // link pagina artista
+    artistLink.href = `./artist.html?id=${result.artist.id}` //da ricontrollare
     artistLink.textContent = result.artist.name
 
     const artistName = document.createElement("p")
