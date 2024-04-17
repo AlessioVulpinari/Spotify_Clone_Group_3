@@ -47,7 +47,6 @@ const displayAlbumDetails = function (album) {
   const albumArt = document.createElement('img')
   albumArt.src = album.cover_big
   albumArt.className = 'img-fluid'
-  albumArt.alt = 'album art'
   albumArt.id = 'album-art'
   imgContainer.appendChild(albumArt)
 
@@ -56,7 +55,7 @@ const displayAlbumDetails = function (album) {
   detailWrapper.className = 'col-9 wrapper ps-2'
 
   const albumLabel = document.createElement('p')
-  albumLabel.textContent = 'Album'
+  albumLabel.innerText = 'Album'
 
   // Title wrapper and content
   const titleWrapper = document.createElement('div')
@@ -65,7 +64,7 @@ const displayAlbumDetails = function (album) {
   titleContent.className = 'title-content'
   const albumTitle = document.createElement('h1')
   albumTitle.id = 'album-title'
-  albumTitle.textContent = album.title
+  albumTitle.innerText = album.title
   titleContent.appendChild(albumTitle)
   titleWrapper.appendChild(titleContent)
 
@@ -74,7 +73,6 @@ const displayAlbumDetails = function (album) {
   infoDiv.className = 'info'
   const artistPic = document.createElement('img')
   artistPic.src = album.artist.picture_big
-  artistPic.alt = 'artist propic'
   artistPic.id = 'artist-propic'
   const artistName = document.createElement('h6')
   artistName.id = 'artist-name'
