@@ -12017,9 +12017,23 @@ a:hover {
   flex-grow: 1;
 }
 
+#top-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 16px;
+}
+#top-bar svg {
+  height: 16px;
+  width: 16px;
+}
+#top-bar .notification {
+  width: 20px;
+  height: 20px;
+}
+
 .btn-round {
   border: 1px solid transparent;
-  background-color: rgba(0, 0, 0, 0.7607843137);
+  background-color: rgba(0, 0, 0, 0.6470588235);
   width: 35px;
   height: 35px;
   padding: 0;
@@ -12038,7 +12052,7 @@ a:hover {
 }
 
 .bg-darker {
-  background-color: rgba(0, 0, 0, 0.7607843137);
+  background-color: rgba(0, 0, 0, 0.6470588235);
   color: #f8f9fa;
   border: 1px solid transparent;
 }
@@ -12053,7 +12067,7 @@ a:hover {
   box-shadow: none;
 }
 .bg-darker .dropdown-menu {
-  background-color: rgba(0, 0, 0, 0.7607843137);
+  background-color: rgba(0, 0, 0, 0.6470588235);
   border: none;
 }
 
@@ -12096,6 +12110,7 @@ a:hover {
 #footer-style img,
 #footer-style .progress {
   cursor: pointer;
+  transition: transform 0.1s ease;
 }
 #footer-style svg:hover {
   transform: scale(1.1);
@@ -12205,6 +12220,9 @@ aside .friends-activity span {
 #container {
   display: flex;
   overflow-x: hidden;
+  height: calc(100vh - 100px);
+  scroll-behavior: smooth;
+  overflow-y: auto;
 }
 #container header,
 #container aside {
@@ -12212,6 +12230,7 @@ aside .friends-activity span {
 }
 #container header {
   min-width: 300px;
+  overflow-y: auto;
 }
 #container aside {
   min-width: 250px;
@@ -12219,4 +12238,215 @@ aside .friends-activity span {
 #container main {
   flex-grow: 1;
   overflow-x: hidden;
-}/*# sourceMappingURL=index.css.map */
+}
+
+#background {
+  background-image: linear-gradient(#8faec1, transparent, #121212) !important;
+}
+
+#hero {
+  margin-top: 3rem;
+  color: #f8f9fa;
+}
+#hero #album-art {
+  border-radius: 6px;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+#hero #album-art:hover {
+  transform: scale(1.02);
+}
+#hero .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 0;
+}
+#hero .title-wrapper {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  height: 100px;
+  line-height: 100px;
+}
+#hero .title-content {
+  display: inline-block;
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  will-change: transform;
+  animation: title-animation 20s linear infinite;
+}
+#hero .title-content:hover {
+  animation-play-state: paused;
+}
+@keyframes title-animation {
+  0%, 20% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translate(-100%);
+  }
+}
+#hero h1, #hero .h1 {
+  margin: 0;
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  overflow: hidden;
+}
+#hero p {
+  margin: 0;
+}
+#hero .info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#hero .info img {
+  border-radius: 50%;
+  width: 30px;
+  margin: 0;
+}
+#hero .info h6, #hero .info .h6 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+#hero .info a {
+  text-decoration: none;
+}
+#hero .info a:hover {
+  text-decoration: underline;
+}
+#hero .info span {
+  font-weight: 600;
+}
+
+#tracklist-section {
+  background-color: rgba(0, 0, 0, 0.6470588235);
+  border-radius: 6px;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+#tracklist-section p {
+  margin: 0;
+  color: #b2b2b2;
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 15px;
+}
+#tracklist-section .container {
+  min-height: 100vh;
+}
+#tracklist-section .container svg {
+  cursor: pointer;
+  width: 30px;
+  fill: #b2b2b2;
+  transition: transform 0.2s ease-in-out;
+}
+#tracklist-section .container svg:hover {
+  fill: #f8f9fa;
+  transform: scale(1.1);
+}
+#tracklist-section .container svg.play-btn {
+  fill: #1DB954;
+  width: 50px;
+}
+#tracklist-section .container .list {
+  margin-left: auto;
+}
+#tracklist-section .container .list:hover {
+  color: #f8f9fa;
+}
+#tracklist-section .container .list:hover p {
+  color: #f8f9fa;
+}
+#tracklist-section .container .list:hover svg {
+  fill: currentColor;
+}
+#tracklist-section .container .list svg {
+  width: 16px;
+}
+#tracklist-section .container .list svg:hover {
+  transform: none;
+}
+#tracklist-section .container .title-section {
+  color: #b2b2b2;
+  margin-block: 1rem;
+  padding-inline: 2rem;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #5f5f5f;
+}
+#tracklist-section .container .title-section svg {
+  width: 16px;
+  margin-right: 1.8rem;
+}
+#tracklist-section .container .title-section svg:hover {
+  transform: none;
+  fill: currentColor;
+}
+#tracklist-section .container #tracklist-cards {
+  color: #b2b2b2;
+  margin-block: 0.5rem;
+}
+#tracklist-section .container #tracklist-cards .track-card {
+  padding-inline: 2rem;
+  padding-block: 0.5rem;
+  border-radius: 6px;
+}
+#tracklist-section .container #tracklist-cards .track-card:hover {
+  background-color: #5f5f5f;
+}
+#tracklist-section .container #tracklist-cards .track-card:hover svg {
+  opacity: 1;
+}
+#tracklist-section .container #tracklist-cards .track-card:hover #substitute-play {
+  fill: #f8f9fa;
+}
+#tracklist-section .container #tracklist-cards span, #tracklist-section .container #tracklist-cards h5, #tracklist-section .container #tracklist-cards .h5, #tracklist-section .container #tracklist-cards small, #tracklist-section .container #tracklist-cards .small {
+  margin: 0;
+}
+#tracklist-section .container #tracklist-cards span, #tracklist-section .container #tracklist-cards h5, #tracklist-section .container #tracklist-cards .h5 {
+  font-weight: 600;
+  font-size: 16px;
+  color: #f8f9fa;
+}
+#tracklist-section .container #tracklist-cards small, #tracklist-section .container #tracklist-cards .small {
+  font-size: 13px;
+}
+#tracklist-section .container #tracklist-cards a:hover {
+  text-decoration: underline;
+}
+#tracklist-section .container #tracklist-cards svg {
+  width: 20px;
+  opacity: 0;
+}
+#tracklist-section .container #tracklist-cards .other-icon {
+  fill: #f8f9fa;
+}
+#tracklist-section .container #tracklist-cards .card-active .number, #tracklist-section .container #tracklist-cards .card-active h5, #tracklist-section .container #tracklist-cards .card-active .h5 {
+  color: #1DB954 !important;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4705882353);
+  border-radius: 100vh;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #f8f9fa;
+}/*# sourceMappingURL=album.css.map */
