@@ -4,7 +4,7 @@ function createStaticCards() {
     const colCard = document.createElement("div")
     colCard.classList.add("col-lg-3", "col-md-6", "col-sm-12", "mb-4")
     const card = document.createElement("div")
-    card.classList.add("card", "m-2", "bg-dark", "grey-text", "rounded-sm")
+    card.classList.add("card", "static-card", "m-2", "bg-dark", "grey-text", "rounded-sm")
     const imgLink = document.createElement("a")
     const img = document.createElement("img")
     img.classList.add("img-fluid", "mb-1", "rounded-sm")
@@ -12,7 +12,6 @@ function createStaticCards() {
     img.alt = `Image ${i}`
     imgLink.appendChild(img)
     card.appendChild(imgLink)
-
     colCard.appendChild(card)
     staticContainer.appendChild(colCard)
   }
@@ -63,13 +62,12 @@ function renderResults(results) {
     colCard.classList.add("col-lg-3", "col-md-6", "col-sm-12", "mb-4")
 
     const card = document.createElement("div")
-    card.classList.add("card", "m-2", "bg-dark", "grey-text")
+    card.classList.add("card", "formCard", "m-1", "bg-dark", "grey-text", "p-3")
 
     const imgLink = document.createElement("a")
     imgLink.href = "#" // link pagina album qui
-
     const img = document.createElement("img")
-    img.classList.add("img-fluid", "mb-1", "rounded-sm")
+    img.classList.add("img-fluid", "mb-1")
     img.src = result.album.cover_medium
     img.alt = result.album.title
     imgLink.appendChild(img)
