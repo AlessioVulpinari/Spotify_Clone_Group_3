@@ -1,19 +1,21 @@
-const params = new URLSearchParams(windows.location.search)
-const id = param.get('id')
-const URL = '' // needs url
-const API_KEY = '' // api key here
+const params = new URLSearchParams(window.location.search)
+const id = params.get('id')
+const URL = 'https://deezerdevs-deezer.p.rapidapi.com/album/75621062'
+const API_KEY = '088f517bd4msh33faf2f02471acfp15abc8jsnf340e72fad46'
+const API_HOST = 'deezerdevs-deezer.p.rapidapi.com'
 
 // define html element you need to generate the others
 
 window.addEventListener('DOMContentLoaded', () => {
-  if (!id) {
-    console.log('No song id has been found in URL.')
-  }
+  //   if (!id) {
+  //     console.log('No song id has been found in URL.')
+  //   }
 
-  fetch(URL + id, {
+  fetch(URL, {
+    method: 'GET',
     headers: {
-      'Content-Type': 'application/json',
-      Authorization: API_KEY,
+      'x-rapidapi-key': API_KEY,
+      'x-rapidapi-host': API_HOST,
     },
   })
     .then((response) => {
@@ -23,63 +25,65 @@ window.addEventListener('DOMContentLoaded', () => {
         throw new Error('Failed to fetch songs id')
       }
     })
-    .then((album) => {
-      displayAlbumDetails(album)
+    .then((data) => {
+      displayAlbumDetails(data)
+      console.log(data)
     })
     .catch((error) => {
       console.log('Error:', error)
     })
 })
 
-const displayAlbumDetails = function (album) {
+const displayAlbumDetails = function (data) {
   const heroRow = document.getElementById('hero-row')
+  if (!heroRow) {
+    console.error('Hero row not found')
+    return
+  }
+
   heroRow.innerHTML = `
     <div class="col-3 p-0">
-            <img src="${cover}" class="img-fluid" alt="album art" id="album-art" />
+            <img src="${data.album.cover}" class="img-fluid" alt="album art" id="album-art" />
              </div>
                 <div class="col-9 wrapper ps-2">
                 <p>Album</p>
-                    <h1 id="album-title">${title}</h1>
+                    <h1 id="album-title">${data.album.title}</h1>
                         <div class="info">
-                            <img src="${propic}" alt="artist propic" id="artist-propic">
-                                <h6 id="artist-name"><a href="#"><span>${artist}</span></a> • ${year} • ${numSongs}, ${duration} </h6>
+                            <img src="${data.artist.picture}" alt="artist propic" id="artist-propic">
+                                <h6 id="artist-name"><a href="#"><span>${data.artist.name}</span></a> • ${data.rank} • ${data.type}, ${data.duration} </h6>
                             </div>
                         </div>
     `
 
   const cardsRow = document.getElementById('cards-row')
-  cardsRow.innerHTML = `
-  <div id="card" class="d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="icon-container d-flex align-items-center justify-content-start">
-                                        <span class="number">${tracknum}</span>
-                                    </div>
-                                    <div class=" d-flex flex-column ">
-                                        <a href="#">
-                                            <h5 id=" trackTitle">${tracktitle}</h6>
-                                        </a>
-                                        <a href="#"><small id="trackArtist">${artist}</small></a>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between gap-3">
-                                    <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24"
-                                        class="Svg-sc-ytk21e-0 cqasRA plus-icon">
-                                        <path
-                                            d="M11.999 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm-11 9c0-6.075 4.925-11 11-11s11 4.925 11 11-4.925 11-11 11-11-4.925-11-11z">
-                                        </path>
-                                        <path
-                                            d="M17.999 12a1 1 0 0 1-1 1h-4v4a1 1 0 1 1-2 0v-4h-4a1 1 0 1 1 0-2h4V7a1 1 0 1 1 2 0v4h4a1 1 0 0 1 1 1z">
-                                        </path>
-                                    </svg>
-                                    <div class="d-flex align-items-center justify-content-end gap-1">
-                                        <p>3:33</p>
-                                        <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24"
-                                            class="Svg-sc-ytk21e-0 cqasRA other-icon">
-                                            <path
-                                                d="M4.5 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm15 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-7.5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>`
+  if (!cardsRow) {
+    console.error('Cards row not found')
+    return
+  }
+  cardsRow.innerHTML = tracks
+    .map(
+      (track, i) => `
+    <div id="card" class="d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-3">
+        <div class="icon-container d-flex align-items-center justify-content-start">
+          <span class="number">${i + 1}</span>
+        </div>
+        <div class="d-flex flex-column">
+          <a href="#">
+            <h5>${track.title}</h5>
+          </a>
+          <a href="#"><small>${data.artist.name}</small></a>
+        </div>
+      </div>
+      <div class="d-flex align-items-center justify-content-between gap-3">
+        <svg ...>...</svg>
+        <div class="d-flex align-items-center justify-content-end gap-1">
+          <p>${track.duration}</p>
+          <svg ...>...</svg>
+        </div>
+      </div>
+    </div>
+  `
+    )
+    .join('')
 }
