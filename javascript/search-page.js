@@ -1,5 +1,6 @@
 function createStaticCards() {
   const staticContainer = document.getElementById("genreStatic")
+
   for (let i = 1; i <= 40; i++) {
     const colCard = document.createElement("div")
     colCard.classList.add("col-lg-3", "col-md-6", "col-sm-12", "mb-4")
