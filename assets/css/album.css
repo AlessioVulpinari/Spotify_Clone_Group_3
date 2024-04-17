@@ -12190,6 +12190,9 @@ aside .friends-activity span {
 #container {
   display: flex;
   overflow-x: hidden;
+  height: calc(100vh - 100px);
+  scroll-behavior: smooth;
+  overflow-y: auto;
 }
 #container header, #container aside {
   flex: 0 0 auto;
@@ -12231,11 +12234,39 @@ aside .friends-activity span {
   align-items: start;
   padding: 0;
 }
+#hero .title-wrapper {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  height: 100px;
+  line-height: 100px;
+}
+#hero .title-content {
+  display: inline-block;
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  will-change: transform;
+  animation: title-animation 20s linear infinite;
+}
+#hero .title-content:hover {
+  animation-play-state: paused;
+}
+@keyframes title-animation {
+  0%, 20% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translate(-100%);
+  }
+}
 #hero h1, #hero .h1 {
   margin: 0;
   font-size: 80px;
   font-weight: 800;
   letter-spacing: -2px;
+  overflow: hidden;
 }
 #hero p {
   margin: 0;
@@ -12270,6 +12301,8 @@ aside .friends-activity span {
   border-radius: 6px;
   margin-top: 1rem;
   padding-top: 1rem;
+  padding-bottom: 0.1rem;
+  margin-bottom: 0.5rem;
 }
 #tracklist-section p {
   margin: 0;
@@ -12332,18 +12365,18 @@ aside .friends-activity span {
   color: #b2b2b2;
   margin-block: 0.5rem;
 }
-#tracklist-section .container #tracklist-cards #card {
+#tracklist-section .container #tracklist-cards .track-card {
   padding-inline: 2rem;
   padding-block: 0.5rem;
   border-radius: 6px;
 }
-#tracklist-section .container #tracklist-cards #card:hover {
+#tracklist-section .container #tracklist-cards .track-card:hover {
   background-color: #5f5f5f;
 }
-#tracklist-section .container #tracklist-cards #card:hover svg {
+#tracklist-section .container #tracklist-cards .track-card:hover svg {
   opacity: 1;
 }
-#tracklist-section .container #tracklist-cards #card:hover #substitute-play {
+#tracklist-section .container #tracklist-cards .track-card:hover #substitute-play {
   fill: #f8f9fa;
 }
 #tracklist-section .container #tracklist-cards span, #tracklist-section .container #tracklist-cards h5, #tracklist-section .container #tracklist-cards .h5, #tracklist-section .container #tracklist-cards small, #tracklist-section .container #tracklist-cards .small {
@@ -12369,4 +12402,20 @@ aside .friends-activity span {
 }
 #tracklist-section .container #tracklist-cards .card-active .number, #tracklist-section .container #tracklist-cards .card-active h5, #tracklist-section .container #tracklist-cards .card-active .h5 {
   color: #1DB954 !important;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4705882353);
+  border-radius: 100vh;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #f8f9fa;
 }/*# sourceMappingURL=album.css.map */

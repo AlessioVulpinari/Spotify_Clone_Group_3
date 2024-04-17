@@ -4,6 +4,9 @@
 #container {
   display: flex;
   overflow-x: hidden;
+  height: calc(100vh - 100px);
+  scroll-behavior: smooth;
+  overflow-y: auto;
 
   header, aside {
     flex: 0 0 auto;
@@ -52,11 +55,43 @@
         padding: 0;
     }
 
+    .title-wrapper {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        height: 100px; 
+        line-height: 100px; 
+    }
+    
+    .title-content {
+        display: inline-block;
+        position: absolute;
+        width: max-content;
+        will-change: transform; 
+        animation: title-animation 20s linear infinite;
+    }
+
+    .title-content:hover {
+        animation-play-state: paused;
+    }    
+    
+    @keyframes title-animation {
+        0%, 20% { 
+            transform: translateX(0);  
+        }
+        100% {
+            transform: translate(-100%);
+        }
+    }
+    
+    
     h1 {
         margin: 0;
         font-size: 80px;
         font-weight: 800;
         letter-spacing: -2px;
+        overflow: hidden;
     }
 
     p {
@@ -107,6 +142,8 @@
     border-radius: 6px;
     margin-top: 1rem;
     padding-top:1rem;
+    padding-bottom: 0.1rem;
+    margin-bottom: 0.5rem;
     
     .container {
         min-height: 100vh;
@@ -171,7 +208,7 @@
             //     position: relative;
             // }
 
-            #card {
+            .track-card {
                 padding-inline: 2rem;
                 padding-block: 0.5rem;
                 border-radius: 6px;
@@ -219,5 +256,21 @@
                 }
             }
         }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffff78;
+    border-radius: 100vh;
+    &:hover {
+        background-color: $light;
     }
 }
