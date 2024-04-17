@@ -57,6 +57,22 @@ a {
     }
 }
 
+//Top bar main
+
+#top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 16px;
+    svg {
+        height: 16px;
+        width: 16px;
+    }
+    .notification {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 //BUTTONS
 
 //previous next buttons
@@ -158,6 +174,7 @@ a {
     //interactive elements
     svg, img, .progress {
         cursor: pointer;
+        transition: transform 0.1s ease;
     }
     svg:hover{
         transform: scale(1.1);

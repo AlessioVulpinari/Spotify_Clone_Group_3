@@ -12203,4 +12203,167 @@ aside .friends-activity span {
 #container main {
   flex-grow: 1;
   overflow-x: hidden;
-}/*# sourceMappingURL=index.css.map */
+}
+
+#background {
+  background-image: linear-gradient(#8faec1, transparent, #121212) !important;
+  position: relative;
+}
+
+#hero {
+  margin-top: 3rem;
+  color: #f8f9fa;
+}
+#hero #album-art {
+  border-radius: 6px;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+#hero #album-art:hover {
+  transform: scale(1.02);
+}
+#hero .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 0;
+}
+#hero h1, #hero .h1 {
+  margin: 0;
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+#hero p {
+  margin: 0;
+}
+#hero .info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#hero .info img {
+  border-radius: 50%;
+  width: 30px;
+  margin: 0;
+}
+#hero .info h6, #hero .info .h6 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+#hero .info a {
+  text-decoration: none;
+}
+#hero .info a:hover {
+  text-decoration: underline;
+}
+#hero .info span {
+  font-weight: 600;
+}
+
+#tracklist-section {
+  background-color: rgba(0, 0, 0, 0.6470588235);
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+#tracklist-section p {
+  margin: 0;
+  color: #b2b2b2;
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 15px;
+}
+#tracklist-section .container {
+  min-height: 100vh;
+}
+#tracklist-section .container svg {
+  cursor: pointer;
+  width: 30px;
+  fill: #b2b2b2;
+  transition: transform 0.2s ease-in-out;
+}
+#tracklist-section .container svg:hover {
+  fill: #f8f9fa;
+  transform: scale(1.1);
+}
+#tracklist-section .container svg.play-btn {
+  fill: #1DB954;
+  width: 50px;
+}
+#tracklist-section .container .list {
+  margin-left: auto;
+}
+#tracklist-section .container .list:hover {
+  color: #f8f9fa;
+}
+#tracklist-section .container .list:hover p {
+  color: #f8f9fa;
+}
+#tracklist-section .container .list:hover svg {
+  fill: currentColor;
+}
+#tracklist-section .container .list svg {
+  width: 16px;
+}
+#tracklist-section .container .list svg:hover {
+  transform: none;
+}
+#tracklist-section .container .title-section {
+  color: #b2b2b2;
+  margin-block: 1rem;
+  padding-inline: 2rem;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #5f5f5f;
+}
+#tracklist-section .container .title-section svg {
+  width: 16px;
+  margin-right: 1.8rem;
+}
+#tracklist-section .container .title-section svg:hover {
+  transform: none;
+  fill: currentColor;
+}
+#tracklist-section .container #tracklist-cards {
+  color: #b2b2b2;
+  margin-top: 0.5rem;
+  padding-inline: 2rem;
+  padding-block: 0.5rem;
+  border-radius: 6px;
+}
+#tracklist-section .container #tracklist-cards .icon-container {
+  position: relative;
+}
+#tracklist-section .container #tracklist-cards:hover {
+  background-color: #5f5f5f;
+}
+#tracklist-section .container #tracklist-cards:hover svg {
+  opacity: 1;
+}
+#tracklist-section .container #tracklist-cards:hover #substitute-play {
+  fill: #f8f9fa;
+}
+#tracklist-section .container #tracklist-cards span, #tracklist-section .container #tracklist-cards h5, #tracklist-section .container #tracklist-cards .h5, #tracklist-section .container #tracklist-cards small, #tracklist-section .container #tracklist-cards .small {
+  margin: 0;
+}
+#tracklist-section .container #tracklist-cards span, #tracklist-section .container #tracklist-cards h5, #tracklist-section .container #tracklist-cards .h5 {
+  font-weight: 600;
+  font-size: 16px;
+  color: #f8f9fa;
+}
+#tracklist-section .container #tracklist-cards small, #tracklist-section .container #tracklist-cards .small {
+  font-size: 13px;
+}
+#tracklist-section .container #tracklist-cards a:hover {
+  text-decoration: underline;
+}
+#tracklist-section .container #tracklist-cards svg {
+  width: 20px;
+  opacity: 0;
+}
+#tracklist-section .container #tracklist-cards .other-icon {
+  fill: #f8f9fa;
+}/*# sourceMappingURL=album.css.map */
