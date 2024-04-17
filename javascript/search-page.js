@@ -3,12 +3,12 @@ function createStaticCards() {
 
   for (let i = 1; i <= 40; i++) {
     const colCard = document.createElement("div")
-    colCard.classList.add("col-lg-3", "col-md-6", "col-sm-12", "mb-4")
+    colCard.classList.add("col-xl-2", "col-lg-3", "col-md-6", "col-sm-12", "mb-4")
     const card = document.createElement("div")
-    card.classList.add("card", "static-card", "m-2", "bg-dark", "grey-text", "rounded-sm")
+    card.classList.add("card", "static-card", "m-2", "bg-transparent", "grey-text", "rounded-sm")
     const imgLink = document.createElement("a")
     const img = document.createElement("img")
-    img.classList.add("img-fluid", "mb-1", "rounded-sm")
+    img.classList.add("img-fluid", "rounded-sm")
     img.src = `assets/imgs/search/image-${i}.jpg`
     img.alt = `Image ${i}`
     imgLink.appendChild(img)
@@ -69,7 +69,7 @@ function renderResults(results) {
 
   results.forEach(result => {
     const colCard = document.createElement("div")
-    colCard.classList.add("col-lg-3", "col-md-6", "col-sm-12", "mb-4")
+    colCard.classList.add("col-xl-2", "col-lg-3", "col-md-6", "col-sm-12", "mb-4")
 
     const card = document.createElement("div")
     card.classList.add("card", "formCard", "m-1", "bg-dark", "grey-text", "p-3")

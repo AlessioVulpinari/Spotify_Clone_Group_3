@@ -24426,6 +24426,10 @@ a {
 }
 
 .static-container {
-  width: 500px;
   margin: 0 auto;
+}
+
+.formCard {
+  max-width: 270px;
+  max-height: 400px;
 }/*# sourceMappingURL=search-page.min.css.map */

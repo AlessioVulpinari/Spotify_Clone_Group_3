@@ -17,7 +17,9 @@ a {
   box-shadow: 10px 11px 46px -6px rgba(0, 0, 0, 0.1);
 }
 .static-container {
-  width: 500px;
-
   margin: 0 auto;
+}
+.formCard {
+  max-width: 270px;
+  max-height: 400px;
 }
