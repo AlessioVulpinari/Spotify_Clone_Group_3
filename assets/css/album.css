@@ -12329,21 +12329,20 @@ aside .friends-activity span {
 }
 #tracklist-section .container #tracklist-cards {
   color: #b2b2b2;
-  margin-top: 0.5rem;
+  margin-block: 0.5rem;
+}
+#tracklist-section .container #tracklist-cards #card {
   padding-inline: 2rem;
   padding-block: 0.5rem;
   border-radius: 6px;
 }
-#tracklist-section .container #tracklist-cards .icon-container {
-  position: relative;
-}
-#tracklist-section .container #tracklist-cards:hover {
+#tracklist-section .container #tracklist-cards #card:hover {
   background-color: #5f5f5f;
 }
-#tracklist-section .container #tracklist-cards:hover svg {
+#tracklist-section .container #tracklist-cards #card:hover svg {
   opacity: 1;
 }
-#tracklist-section .container #tracklist-cards:hover #substitute-play {
+#tracklist-section .container #tracklist-cards #card:hover #substitute-play {
   fill: #f8f9fa;
 }
 #tracklist-section .container #tracklist-cards span, #tracklist-section .container #tracklist-cards h5, #tracklist-section .container #tracklist-cards .h5, #tracklist-section .container #tracklist-cards small, #tracklist-section .container #tracklist-cards .small {
@@ -12366,4 +12365,7 @@ aside .friends-activity span {
 }
 #tracklist-section .container #tracklist-cards .other-icon {
   fill: #f8f9fa;
+}
+#tracklist-section .container #tracklist-cards .card-active .number, #tracklist-section .container #tracklist-cards .card-active h5, #tracklist-section .container #tracklist-cards .card-active .h5 {
+  color: #1DB954 !important;
 }/*# sourceMappingURL=album.css.map */

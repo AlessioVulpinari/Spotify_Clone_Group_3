@@ -164,27 +164,30 @@
 
         #tracklist-cards {
             color: $mid-light;
-            margin-top: 0.5rem;
-            padding-inline: 2rem;
-            padding-block: 0.5rem;
-            border-radius: 6px;
+            margin-block: 0.5rem;
 
-            .icon-container {
-                position: relative;
+            // .icon-container {
+            //     position: relative;
+            // }
+
+            #card {
+                padding-inline: 2rem;
+                padding-block: 0.5rem;
+                border-radius: 6px;
+
+                &:hover {
+                    background-color: $secondary-emphasis;
+                    svg {
+                        opacity: 1;
+                    }
+                    // .number {
+                    //     // opacity: 0;
+                    // }
+                    #substitute-play {
+                        fill: $light;
+                    }
+                } 
             }
-
-            &:hover {
-                background-color: $secondary-emphasis;
-                svg {
-                    opacity: 1;
-                }
-                .number {
-                    // opacity: 0;
-                }
-                #substitute-play {
-                    fill: $light;
-                }
-            } 
 
             span, h5, small {
                 margin: 0;
@@ -207,6 +210,12 @@
             }
             .other-icon {
                 fill: $light;
+            }
+
+            .card-active {
+                .number, h5 {
+                color: $primary !important;
+                }
             }
         }
     }
