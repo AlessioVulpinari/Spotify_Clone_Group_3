@@ -94,13 +94,7 @@
                   <path
                     d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2"
                   />
-                  <path
-                    d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2"
-                  />
                   <path fill-rule="evenodd" d="M12 3v10h-1V3z" />
-                  <path
-                    d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1z"
-                  />
                   <path
                     d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1z"
                   />
@@ -175,7 +169,6 @@
           </ul>
         </nav>
       </header>
-      <main class="container-fluid flex-grow-1 bg-dark">
       <main
         style="
           background-image: linear-gradient(
@@ -188,6 +181,7 @@
       >
         <div class="container p-0 text-white">
           <div
+            id="image-artist"
             class="bg-image d-flex flex-column justify-content-end"
             style="
               height: 350px;
@@ -213,8 +207,8 @@
               </span>
               <span class="col-11">Artista verificato</span>
 
-              <h1 class="mb-5" style="font-size: 6em">Yellowcard</h1>
-              <span>3.456.540 ascoltatori mensili</span>
+              <h1 id="name" class="mb-5" style="font-size: 6em">Yellowcard</h1>
+              <span id="fans">3.456.540 ascoltatori mensili</span>
             </div>
           </div>
         </div>
@@ -256,7 +250,7 @@
           >
         </div>
         <div class="d-flex m-5">
-          <div class="col-8">
+          <div id="table" class="col-8">
             <h3 class="text-white fw-bold mb-5">Popolari</h3>
             <div class="row align-items-center mb-2">
               <div class="col-1 text-secondary text-end p-0">
@@ -272,7 +266,7 @@
               <div class="col-3 text-secondary">276.443.234</div>
               <div class="col-2 text-secondary">2.23</div>
             </div>
-            <div class="row align-items-center mb-2">
+            <!-- <div class="row align-items-center mb-2">
               <div class="col-1 text-secondary text-end p-0">2</div>
               <div class="col-6">
                 <img
@@ -307,8 +301,8 @@
               </div>
               <div class="col-3 text-secondary">276.443.234</div>
               <div class="col-2 text-secondary">2.23</div>
-            </div>
-            <h6 class="text-secondary mt-3">VISUALIZZA ALTRO</h6>
+            </div> -->
+            <!-- <h6 class="text-secondary mt-3">VISUALIZZA ALTRO</h6> -->
           </div>
           <div class="col-4">
             <h4 class="text-white">Brani che ti piacciono</h4>
@@ -411,7 +405,6 @@
             </div>
           </div>
         </div>
-        
       </aside>
     </div>
     <footer
@@ -628,14 +621,64 @@
 
     <script>
       const URL = "https://deezerdevs-deezer.p.rapidapi.com/artist/eminem";
-      fetch(URL, {
-        method: "GET",
-        headers: {
-          "X-RapidAPI-Key":
-            "9ca351345fmsh95edc7f7a170363p1d8824jsn6e74df62a896",
-          "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-        },
-      });
+      window.onload = function () {
+        fetch(URL, {
+          method: "GET",
+          headers: {
+            "X-RapidAPI-Key":
+              "9ca351345fmsh95edc7f7a170363p1d8824jsn6e74df62a896",
+            "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              return response.json();
+            }
+          })
+
+          .then((obj) => {
+            console.log(obj.name);
+            console.log(obj.nb_fan);
+            document.getElementById("name").innerText = obj.name;
+            document.getElementById("fans").innerText =
+              obj.nb_fan + " ascoltatori mensili";
+            const imageDIv = document.getElementById("image-artist");
+            imageDIv.style.backgroundImage =
+              "url('https://e-cdns-images.dzcdn.net/images/artist/19cc38f9d69b352f718782e7a22f9c32/1000x1000-000000-80-0-0.jpg')";
+          });
+      };
+
+      fetch(
+        " https://striveschool-api.herokuapp.com/api/deezer/artist/13/top?limit=10",
+        {
+          method: "GET",
+        }
+      )
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          }
+        })
+
+        .then((obj) => {
+          obj.data.forEach((element) => {
+            const table = document.getElementById("table");
+            const row = document.createElement("div");
+            row.classList.add("row", "align-items-center", "mb-2");
+            row.innerHTML = `
+          <div class="col-1 text-secondary text-end p-0">
+              <span>1</span>
+          </div>
+          <div class="col-6">
+              <img style="width: 45px" src="./assets/imgs/main/image-19.jpg" />
+              <span class="text-white">${element.title}</span>
+          </div>
+          <div class="col-3 text-secondary">${element.rank}</div>
+          <div class="col-2 text-secondary">${element.duration}</div>
+      `;
+            table.appendChild(row);
+          });
+        });
     </script>
   </body>
 </html>
