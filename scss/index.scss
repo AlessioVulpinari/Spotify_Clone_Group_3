@@ -5,7 +5,8 @@
   display: flex;
   overflow-x: hidden;
 
-  header, aside {
+  header,
+  aside {
     flex: 0 0 auto;
   }
 
@@ -22,4 +23,3 @@
     overflow-x: hidden;
   }
 }
-

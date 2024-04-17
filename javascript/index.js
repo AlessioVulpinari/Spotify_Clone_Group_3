@@ -1,5 +1,4 @@
 const URL_DEEZER = "https://deezerdevs-deezer.p.rapidapi.com/search?q="
-const audioPlayer = document.getElementById("audio-output")
 
 const fetchAlbum = async function (artist) {
   const options = {
@@ -108,19 +107,6 @@ const createVerticalCards = (artist) => {
       }
     })
     .catch((err) => console.log(err))
-}
-
-const playAudio = function (url) {
-  audioPlayer.src = url
-  audioPlayer.play()
-}
-
-const stopAudio = function () {
-  if (audioPlayer.paused !== true) {
-    audioPlayer.pause()
-  } else {
-    audioPlayer.play()
-  }
 }
 
 addEventListener("DOMContentLoaded", () => {
