@@ -12196,6 +12196,7 @@ aside .friends-activity span {
 }
 #container header {
   min-width: 300px;
+  overflow-y: auto;
 }
 #container aside {
   min-width: 250px;
@@ -12207,7 +12208,6 @@ aside .friends-activity span {
 
 #background {
   background-image: linear-gradient(#8faec1, transparent, #121212) !important;
-  position: relative;
 }
 
 #hero {
@@ -12267,6 +12267,7 @@ aside .friends-activity span {
 
 #tracklist-section {
   background-color: rgba(0, 0, 0, 0.6470588235);
+  border-radius: 6px;
   margin-top: 1rem;
   padding-top: 1rem;
 }
