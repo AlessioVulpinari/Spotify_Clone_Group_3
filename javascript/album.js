@@ -44,35 +44,11 @@ const displayAlbumDetails = function (album) {
   // Image container and image element
   const imgContainer = document.createElement('div')
   imgContainer.className = 'col-3 p-0'
-  const albumArt = document.createElement('img') //ALBUM ART
+  const albumArt = document.createElement('img')
   albumArt.src = album.cover_big
   albumArt.className = 'img-fluid'
   albumArt.id = 'album-art'
   imgContainer.appendChild(albumArt)
-
-  //convert to hex
-  const rgbToHex = (r, g, b) =>
-    '#' +
-    [r, g, b]
-      .map((x) => {
-        const hex = x.toString(16)
-        return hex.length === 1 ? '0' + hex : hex
-      })
-      .join('')
-
-  //COLOR THIEF
-  const backgroundContainer = document.getElementById('background')
-  const colorThief = new colorThief()
-  if (albumArt.complete) {
-    const color = colorThief.getColor(albumArt)
-    const hexColor = rgbToHex(color[0], color[1], color[2])
-    backgroundContainer.style.backgroundImage = `linear-gradient(${hexColor}, transparent, $dark) !important`
-  } else {
-    image.addEventListener('load', function () {
-      colorThief.getColor(img)
-      backgroundContainer.style.backgroundImage = `linear-gradient(#8faec1, transparent, $dark) !important`
-    })
-  }
 
   // Wrapper for album details
   const detailWrapper = document.createElement('div')
