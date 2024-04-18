@@ -229,11 +229,15 @@ a:hover {
 //ASIDE
 
 aside {
+
+  svg, img, h6, p {
+    cursor: pointer;
+  }
+
   svg {
     height: 18px;
     width: 18px;
     fill: $secondary-emphasis;
-    cursor: pointer;
   }
   img {
     width: 40px;
@@ -258,6 +262,10 @@ aside {
     h6 {
       font-weight: 800;
       font-size: 14px;
+    }
+
+    & p:hover {
+      text-decoration: underline;
     }
     p {
       font-size: 10px;
