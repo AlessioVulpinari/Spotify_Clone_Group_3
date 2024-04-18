@@ -12486,9 +12486,6 @@ aside .friends-activity span {
   text-overflow: ellipsis;
   max-width: 100%;
 }
-#discography-section #card-album-cover {
-  border-radius: 6px;
-}
 
 #rec-card .card {
   border: none;

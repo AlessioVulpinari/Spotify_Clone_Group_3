@@ -316,10 +316,6 @@
   
   #discography-section {
     @include card; 
-  
-    #card-album-cover {
-      border-radius: 6px;
-    }
   }
 
   #rec-card {
