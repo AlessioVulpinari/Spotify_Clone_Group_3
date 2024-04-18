@@ -48,6 +48,7 @@ const displayAlbumDetails = function (album) {
   albumArt.src = album.cover_big
   albumArt.className = 'img-fluid'
   albumArt.id = 'album-art'
+  albumArt.crossOrigin = 'anonymous' ///cross origin <--------
   imgContainer.appendChild(albumArt)
 
   // Wrapper for album details
@@ -92,6 +93,38 @@ const displayAlbumDetails = function (album) {
   // Append to heroRow
   heroRow.appendChild(imgContainer)
   heroRow.appendChild(detailWrapper)
+
+  /////////////////////////////////////////
+  const colorThief = new ColorThief()
+  const img = document.getElementById('album-art')
+  const background = document.getElementById('background')
+
+  //hex value
+  const rgbToHex = (r, g, b) =>
+    '#' +
+    [r, g, b]
+      .map((x) => {
+        const hex = x.toString(16)
+        return hex.length === 1 ? '0' + hex : hex
+      })
+      .join('')
+
+  //update background
+  const updateBackground = (rgbColor) => {
+    console.log('Extracted RGB Color:', rgbColor)
+    const hexColor = rgbToHex(rgbColor[0], rgbColor[1], rgbColor[2])
+    console.log('Converted HEX Color:', hexColor)
+    background.style.backgroundImage = `linear-gradient(to bottom, ${hexColor}, transparent, #121212)`
+    //I DID IT
+  }
+
+  if (img.complete) {
+    updateBackground(colorThief.getColor(img))
+  } else {
+    img.addEventListener('load', function () {
+      updateBackground(colorThief.getColor(img))
+    })
+  }
 
   const cardsRow = document.getElementById('cards-row')
   if (!cardsRow) {
