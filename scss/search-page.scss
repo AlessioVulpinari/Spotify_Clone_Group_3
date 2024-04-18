@@ -1,21 +1,23 @@
 @import "./partials/bootstrap-overrides";
 @import "./partials/general";
 @import "./partials//navmobile";
-body {
-  min-width: 100vh;
-}
+
 main {
-  max-height: calc(100vh - 100px);
   overflow-y: auto;
   padding: 10px;
 }
 @media (max-width: 768px) {
   main {
     max-height: none;
+    height: 100vh;
     overflow-y: auto;
     background-color: inherit;
   }
+  #container {
+    min-height: 100vh;
+  }
 }
+
 ::-webkit-scrollbar {
   width: 8px;
 }

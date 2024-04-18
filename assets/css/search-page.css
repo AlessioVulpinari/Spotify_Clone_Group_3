@@ -12017,9 +12017,23 @@ a:hover {
   flex-grow: 1;
 }
 
+#top-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 16px;
+}
+#top-bar svg {
+  height: 16px;
+  width: 16px;
+}
+#top-bar .notification {
+  width: 20px;
+  height: 20px;
+}
+
 .btn-round {
   border: 1px solid transparent;
-  background-color: rgba(0, 0, 0, 0.7607843137);
+  background-color: rgba(0, 0, 0, 0.6470588235);
   width: 35px;
   height: 35px;
   padding: 0;
@@ -12038,7 +12052,7 @@ a:hover {
 }
 
 .bg-darker {
-  background-color: rgba(0, 0, 0, 0.7607843137);
+  background-color: rgba(0, 0, 0, 0.6470588235);
   color: #f8f9fa;
   border: 1px solid transparent;
 }
@@ -12053,7 +12067,7 @@ a:hover {
   box-shadow: none;
 }
 .bg-darker .dropdown-menu {
-  background-color: rgba(0, 0, 0, 0.7607843137);
+  background-color: rgba(0, 0, 0, 0.6470588235);
   border: none;
 }
 
@@ -12114,8 +12128,45 @@ a:hover {
   color: #f8f9fa;
 }
 
+#playing-song {
+  width: 290px;
+}
+
+#playerSettingIcons {
+  width: 290px;
+}
+
 .progress {
   height: 5px;
+}
+
+.form-range {
+  width: 40%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  border-radius: 10px;
+  height: 5px;
+  background-color: #f8f9fa;
+}
+.form-range::-webkit-slider-runnable-track:active {
+  background-color: #1DB954;
+}
+
+.form-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  margin-top: -5px;
+  background-color: #f8f9fa;
+}
+.form-range::-webkit-slider-thumb:active {
+  background-color: #1DB954;
 }
 
 #songPlayerCenter {
@@ -12138,11 +12189,13 @@ a:hover {
   color: #f8f9fa;
 }
 
+aside svg, aside img, aside h6, aside .h6, aside p {
+  cursor: pointer;
+}
 aside svg {
   height: 18px;
   width: 18px;
   fill: #5f5f5f;
-  cursor: pointer;
 }
 aside img {
   width: 40px;
@@ -12165,6 +12218,9 @@ aside .friends-activity svg {
 aside .friends-activity h6, aside .friends-activity .h6 {
   font-weight: 800;
   font-size: 14px;
+}
+aside .friends-activity p:hover {
+  text-decoration: underline;
 }
 aside .friends-activity p {
   font-size: 10px;
@@ -12194,6 +12250,14 @@ aside .friends-activity span {
   text-overflow: ellipsis;
 }
 
+.transition {
+  transition: width 0.5s;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 #navbarmobile {
   z-index: 10;
   position: fixed;
@@ -12207,12 +12271,7 @@ aside .friends-activity span {
   margin-top: 20px;
 }
 
-body {
-  min-width: 100vh;
-}
-
 main {
-  max-height: calc(100vh - 100px);
   overflow-y: auto;
   padding: 10px;
 }
@@ -12220,8 +12279,12 @@ main {
 @media (max-width: 768px) {
   main {
     max-height: none;
+    height: 100vh;
     overflow-y: auto;
     background-color: inherit;
+  }
+  #container {
+    min-height: 100vh;
   }
 }
 ::-webkit-scrollbar {

@@ -3,7 +3,7 @@ function createStaticCards() {
 
   for (let i = 1; i <= 47; i++) {
     const colCard = document.createElement("div")
-    colCard.classList.add("col-xl-3", "col-lg-4", "col-6", "g-0")
+    colCard.classList.add("col-xl-3", "col-lg-4", "col-12", "g-0")
     const card = document.createElement("div")
     card.classList.add(
       "card",

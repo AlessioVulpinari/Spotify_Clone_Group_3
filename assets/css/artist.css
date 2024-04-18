@@ -12258,80 +12258,337 @@ aside .friends-activity span {
   cursor: pointer;
 }
 
-#navbarmobile {
-  z-index: 10;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgb(0, 0, 0));
-}
-#navbarmobile div ul {
-  width: 100%;
-  height: 100px;
-  margin-top: 20px;
-}
-
-main {
+#container {
+  display: flex;
+  overflow-x: hidden;
+  height: calc(100vh - 100px);
+  scroll-behavior: smooth;
   overflow-y: auto;
-  padding: 10px;
+}
+#container header, #container aside {
+  flex: 0 0 auto;
+}
+#container header {
+  min-width: 300px;
+  overflow-y: auto;
+}
+#container aside {
+  min-width: 250px;
+}
+#container main {
+  flex-grow: 1;
+  overflow-x: hidden;
 }
 
-@media (max-width: 768px) {
-  main {
-    max-height: none;
-    height: 100vh;
-    overflow-y: auto;
-    background-color: inherit;
-  }
-  #container {
-    min-height: 100vh;
-  }
+#background {
+  background-image: linear-gradient(transparent, #121212, #121212), url("/assets/imgs/main/image-4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+#hero {
+  margin-top: 8rem;
+  padding-left: 0.5rem;
+  color: #f8f9fa;
+}
+#hero svg {
+  fill: #3c91f4;
+  background-image: radial-gradient(circle at center, white 50%, transparent 11%);
+  width: 22px;
+}
+#hero h1, #hero .h1 {
+  margin: 0;
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  overflow: hidden;
+}
+#hero p {
+  margin: 0;
+  font-size: 13px;
+}
+#hero h6, #hero .h6 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+#tracklist-section {
+  background-color: rgba(0, 0, 0, 0.6470588235);
+  border-radius: 6px;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+#tracklist-section p {
+  margin: 0;
+  color: #b2b2b2;
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 15px;
+}
+#tracklist-section .btn {
+  color: #b2b2b2;
+  border-color: 1px solid #b2b2b2;
+  padding-block: 5px;
+  font-size: 14px;
+  transition: transform 0.2s ease-in-out;
+}
+#tracklist-section .btn:hover {
+  color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  background: rgba(0, 0, 0, 0.6470588235);
+  transform: scale(1.05);
+}
+#tracklist-section .container {
+  min-height: 100vh;
+}
+#tracklist-section .container svg {
+  cursor: pointer;
+  width: 30px;
+  fill: #b2b2b2;
+  transition: transform 0.2s ease-in-out;
+}
+#tracklist-section .container svg:hover {
+  fill: #f8f9fa;
+  transform: scale(1.1);
+}
+#tracklist-section .container svg.play-btn {
+  fill: #1DB954;
+  width: 50px;
+}
+#tracklist-section .container .list {
+  margin-left: auto;
+}
+#tracklist-section .container .list:hover {
+  color: #f8f9fa;
+}
+#tracklist-section .container .list:hover p {
+  color: #f8f9fa;
+}
+#tracklist-section .container .list:hover svg {
+  fill: currentColor;
+}
+#tracklist-section .container .list svg {
+  width: 16px;
+}
+#tracklist-section .container .list svg:hover {
+  transform: none;
+}
+#tracklist-section .container .title-section {
+  color: #b2b2b2;
+  margin-block: 1rem;
+  padding-inline: 2rem;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #5f5f5f;
+}
+#tracklist-section .container .title-section svg {
+  width: 16px;
+  margin-right: 1.8rem;
+}
+#tracklist-section .container .title-section svg:hover {
+  transform: none;
+  fill: currentColor;
+}
+
+.sec-titles {
+  margin-block: 1rem 0.5rem;
+  color: #f8f9fa;
+}
+
+#tracklist-section {
+  background-color: rgba(0, 0, 0, 0.6470588235);
+  border-radius: 6px;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+#tracklist-section p {
+  margin: 0;
+  color: #b2b2b2;
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 15px;
+}
+#tracklist-section .container {
+  min-height: 100vh;
+}
+#tracklist-section .container svg {
+  cursor: pointer;
+  width: 30px;
+  fill: #b2b2b2;
+  transition: transform 0.2s ease-in-out;
+}
+#tracklist-section .container svg:hover {
+  fill: #f8f9fa;
+  transform: scale(1.1);
+}
+#tracklist-section .container svg.play-btn {
+  fill: #1DB954;
+  width: 50px;
+}
+#tracklist-section .container #tracklist-cards {
+  color: #b2b2b2;
+  margin-block: 1rem 2rem;
+}
+#tracklist-section .container #tracklist-cards .track-card {
+  padding-inline: 2rem;
+  padding-block: 0.5rem;
+  border-radius: 6px;
+  position: relative;
+}
+#tracklist-section .container #tracklist-cards .track-card:hover {
+  background-color: #5f5f5f;
+}
+#tracklist-section .container #tracklist-cards .track-card:hover span {
+  opacity: 0;
+}
+#tracklist-section .container #tracklist-cards .track-card:hover i {
+  opacity: 1;
+  color: #f8f9fa;
+}
+#tracklist-section .container #tracklist-cards .track-card:hover svg {
+  opacity: 1;
+}
+#tracklist-section .container #tracklist-cards .track-card:hover #substitute-play {
+  fill: #f8f9fa;
+}
+#tracklist-section .container #tracklist-cards span, #tracklist-section .container #tracklist-cards h5, #tracklist-section .container #tracklist-cards .h5, #tracklist-section .container #tracklist-cards small, #tracklist-section .container #tracklist-cards .small, #tracklist-section .container #tracklist-cards a {
+  margin: 0;
+}
+#tracklist-section .container #tracklist-cards .see-more {
+  padding-left: 2rem;
+}
+#tracklist-section .container #tracklist-cards span, #tracklist-section .container #tracklist-cards h5, #tracklist-section .container #tracklist-cards .h5 {
+  font-weight: 600;
+  font-size: 16px;
+  color: #f8f9fa;
+}
+#tracklist-section .container #tracklist-cards small, #tracklist-section .container #tracklist-cards .small {
+  font-size: 13px;
+}
+#tracklist-section .container #tracklist-cards a:hover {
+  text-decoration: underline;
+}
+#tracklist-section .container #tracklist-cards i {
+  position: absolute;
+  left: 28px;
+  font-size: 18px;
+  opacity: 0;
+}
+#tracklist-section .container #tracklist-cards svg {
+  width: 20px;
+  opacity: 0;
+}
+#tracklist-section .container #tracklist-cards .other-icon {
+  fill: #f8f9fa;
+}
+#tracklist-section .container #tracklist-cards .card-active .number, #tracklist-section .container #tracklist-cards .card-active h5, #tracklist-section .container #tracklist-cards .card-active .h5, #tracklist-section .container #tracklist-cards .card-active i {
+  color: #1DB954 !important;
+}
+
+#discography-section .card {
+  border: none;
+  color: #b2b2b2;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 1rem 1rem 0;
+  margin-bottom: 0.5rem;
+}
+#discography-section .card:hover {
+  background-color: #121212;
+}
+#discography-section .card:hover svg {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+#discography-section .card img {
+  border-radius: 8px;
+  position: relative;
+}
+#discography-section .card svg {
+  position: absolute;
+  bottom: 85px;
+  right: 20px;
+  background-image: radial-gradient(circle at center, #121212 50%, transparent 11%);
+  opacity: 0;
+}
+#discography-section .card .card-body {
+  padding-block: 1rem;
+  padding-left: 0;
+  border-radius: 8px;
+  background-color: transparent;
+}
+#discography-section .card .card-body h6, #discography-section .card .card-body .h6 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+#rec-card .card {
+  border: none;
+  color: #b2b2b2;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 1rem 1rem 0;
+  margin-bottom: 0.5rem;
+}
+#rec-card .card:hover {
+  background-color: #121212;
+}
+#rec-card .card:hover svg {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+#rec-card .card img {
+  border-radius: 8px;
+  position: relative;
+}
+#rec-card .card svg {
+  position: absolute;
+  bottom: 85px;
+  right: 20px;
+  background-image: radial-gradient(circle at center, #121212 50%, transparent 11%);
+  opacity: 0;
+}
+#rec-card .card .card-body {
+  padding-block: 1rem;
+  padding-left: 0;
+  border-radius: 8px;
+  background-color: transparent;
+}
+#rec-card .card .card-body h6, #rec-card .card .card-body .h6 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+#rec-card #rec-cover {
+  border-radius: 50%;
+}
+
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: white;
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.4705882353);
+  border-radius: 100vh;
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.grey-text {
-  color: rgba(255, 255, 255, 0.6);
-  list-style: none;
-}
-
-.transparent {
-  background-color: rgba(249, 249, 249, 0.605);
-}
-
-.card:hover {
-  box-shadow: 10px 11px 46px -6px rgba(0, 0, 0, 0.1);
-}
-
-.static-container {
-  margin: 0 auto;
-}
-
-.formCard {
-  max-width: 270px;
-  max-height: 400px;
-}
-
-.cardAnimation {
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.cardAnimation:hover {
-  transform: scale(1.02);
-}/*# sourceMappingURL=search-page.min.css.map */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #f8f9fa;
+}/*# sourceMappingURL=artist.css.map */
