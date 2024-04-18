@@ -194,6 +194,15 @@ a:hover {
   @include footer-style;
 }
 
+//this is to center the central player (delete if you don't like it)
+#playing-song {
+  width: 290px;
+}
+
+#playerSettingIcons {
+  width: 290px;
+}
+
 //bar general stile
 @mixin player-bar {
   height: 5px;
@@ -201,6 +210,34 @@ a:hover {
 .progress {
   @include player-bar();
 }
+
+//volume bar
+
+.form-range{
+  width: 40%;
+  appearance: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+.form-range::-webkit-slider-runnable-track {
+  border-radius: 10px;
+  height: 5px;
+  background-color: $light;
+  &:active{
+    background-color: $primary;
+  }
+}
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  margin-top: -5px;
+  background-color: $light;
+  &:active{
+    background-color: $primary;
+  }
+}
+
+
 
 //central player (play, ...)
 @mixin player-center {
