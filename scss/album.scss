@@ -204,23 +204,26 @@
             color: $mid-light;
             margin-block: 0.5rem;
 
-            // .icon-container {
-            //     position: relative;
-            // }
-
             .track-card {
                 padding-inline: 2rem;
                 padding-block: 0.5rem;
                 border-radius: 6px;
+                position: relative;
 
                 &:hover {
                     background-color: $secondary-emphasis;
+
+                    span{
+                        opacity: 0;
+                    }
+
+                    i {
+                        opacity: 1;
+                        color: $light;
+                    }
                     svg {
                         opacity: 1;
                     }
-                    // .number {
-                    //     // opacity: 0;
-                    // }
                     #substitute-play {
                         fill: $light;
                     }
@@ -241,7 +244,12 @@
             a:hover {
                 text-decoration: underline;
             }
-
+            i {
+                position: absolute;
+                left: 28px;
+                font-size: 18px;
+                opacity: 0;
+            }
             svg {
                 width: 20px;
                 opacity: 0;
@@ -251,7 +259,7 @@
             }
 
             .card-active {
-                .number, h5 {
+                .number, h5, i {
                 color: $primary !important;
                 }
             }
