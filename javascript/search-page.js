@@ -3,9 +3,17 @@ function createStaticCards() {
 
   for (let i = 1; i <= 47; i++) {
     const colCard = document.createElement("div")
-    colCard.classList.add("col-xl-2", "col-lg-3", "col-md-6", "col-sm-12", "mb-4")
+    colCard.classList.add("col-xl-3", "col-lg-4", "col-6", "g-0")
     const card = document.createElement("div")
-    card.classList.add("card", "static-card", "m-2", "bg-transparent", "grey-text", "rounded-sm")
+    card.classList.add(
+      "card",
+      "static-card",
+      "m-2",
+      "bg-transparent",
+      "cardAnimation",
+      "grey-text",
+      "rounded-sm"
+    )
     const imgLink = document.createElement("a")
     const img = document.createElement("img")
     img.classList.add("img-fluid", "rounded-sm")
@@ -20,13 +28,13 @@ function createStaticCards() {
 
 window.addEventListener("DOMContentLoaded", createStaticCards)
 
-document.getElementById("searchForm").addEventListener("submit", function (event) {
-  event.preventDefault()
+let timeoutId
 
+function search() {
   const staticContainer = document.getElementById("genreStatic")
   staticContainer.innerHTML = ""
   const inputForm = document.getElementById("artist")
-  const textForm = inputForm.value
+  const textForm = inputForm.value.trim()
   console.log(textForm)
   const URL = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${textForm}`
   fetch(URL, {
@@ -47,8 +55,6 @@ document.getElementById("searchForm").addEventListener("submit", function (event
         const results = data.data
         renderResults(results)
       } else {
-        const inputForm = document.getElementById("artist")
-        const textForm = inputForm.value.trim()
         if (textForm === "") {
           createStaticCards()
         } else {
@@ -60,6 +66,17 @@ document.getElementById("searchForm").addEventListener("submit", function (event
     .catch(error => {
       console.error("Error:", error)
     })
+}
+
+document.getElementById("searchForm").addEventListener("submit", function (event) {
+  event.preventDefault()
+  search()
+})
+
+document.getElementById("artist").addEventListener("input", function (event) {
+  event.preventDefault()
+  clearTimeout(timeoutId)
+  timeoutId = setTimeout(search, 500)
 })
 
 function renderResults(results) {
@@ -69,7 +86,7 @@ function renderResults(results) {
 
   results.forEach(result => {
     const colCard = document.createElement("div")
-    colCard.classList.add("col-xl-2", "col-lg-3", "col-md-6", "col-sm-12", "mb-4")
+    colCard.classList.add("col-xl-2", "col-lg-4", "col-md-6")
 
     const card = document.createElement("div")
     card.classList.add("card", "formCard", "m-1", "bg-dark", "grey-text", "p-3")
@@ -77,7 +94,7 @@ function renderResults(results) {
     const imgLink = document.createElement("a")
     imgLink.href = `./album.html?id=${result.album.id}`
     const img = document.createElement("img")
-    img.classList.add("img-fluid", "mb-1")
+    img.classList.add("img-fluid", "mb-1", "cardAnimation")
     img.src = result.album.cover_medium
     img.alt = result.album.title
     imgLink.appendChild(img)

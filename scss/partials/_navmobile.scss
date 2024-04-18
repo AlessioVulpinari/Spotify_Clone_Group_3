@@ -1,0 +1,12 @@
+#navbarmobile {
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-image: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0));
+  div ul {
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+  }
+}
