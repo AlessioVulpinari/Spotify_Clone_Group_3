@@ -12590,6 +12590,15 @@ aside .friends-activity span {
 #tracklist-section .container #tracklist-cards .track-card:hover #substitute-play {
   fill: #f8f9fa;
 }
+#tracklist-section .container #tracklist-cards h5, #tracklist-section .container #tracklist-cards .h5 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: fade;
+  max-width: 100%;
+}
 #tracklist-section .container #tracklist-cards span,
 #tracklist-section .container #tracklist-cards h5,
 #tracklist-section .container #tracklist-cards .h5,
@@ -12655,8 +12664,8 @@ aside .friends-activity span {
 }
 #discography-section .card svg {
   position: absolute;
-  bottom: 85px;
-  right: 20px;
+  bottom: 40px;
+  right: 10px;
   background-image: radial-gradient(circle at center, #121212 50%, transparent 11%);
   opacity: 0;
 }
@@ -12697,8 +12706,8 @@ aside .friends-activity span {
 }
 .rec-card .card svg {
   position: absolute;
-  bottom: 85px;
-  right: 20px;
+  bottom: 40px;
+  right: 10px;
   background-image: radial-gradient(circle at center, #121212 50%, transparent 11%);
   opacity: 0;
 }

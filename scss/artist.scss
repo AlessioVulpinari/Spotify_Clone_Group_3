@@ -237,6 +237,16 @@
         }
       }
 
+      h5 {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: fade;
+        max-width: 100%;
+      }
+
       span,
       h5,
       small,
@@ -308,8 +318,8 @@
 
     svg {
       position: absolute;
-      bottom: 85px;
-      right: 20px;
+      bottom: 40px;
+      right: 10px;
       background-image: radial-gradient(circle at center, $dark 50%, transparent 11%);
       opacity: 0;
     }
