@@ -114,7 +114,7 @@ const displayAlbumDetails = function (album) {
     console.log('Extracted RGB Color:', rgbColor)
     const hexColor = rgbToHex(rgbColor[0], rgbColor[1], rgbColor[2])
     console.log('Converted HEX Color:', hexColor)
-    background.style.backgroundImage = `linear-gradient(to bottom, ${hexColor}, transparent, #121212)`
+    background.style.backgroundImage = `linear-gradient(to bottom, ${hexColor}, transparent)`
     //I DID IT
   }
 
@@ -125,6 +125,7 @@ const displayAlbumDetails = function (album) {
       updateBackground(colorThief.getColor(img))
     })
   }
+  /////////////////////////////////////////
 
   const cardsRow = document.getElementById('cards-row')
   if (!cardsRow) {
