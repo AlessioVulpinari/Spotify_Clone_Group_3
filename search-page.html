@@ -443,10 +443,14 @@
     <div class="d-none d-md-block">
       <footer id="footer-style" class="container-fluid">
         <div id="playing-song" class="d-flex gap-3 align-items-center">
-          <img src="assets/imgs/search/image-1.jpeg" alt="album cover" />
+          <a id="coverLink"
+            ><img src="assets/imgs/search/image-1.jpg" alt="album cover" id="trackCover"
+          /></a>
           <div class="d-flex flex-column">
-            <h5 id=" trackTitle" class="m-0">Pasta</h5>
-            <small id="trackArtist" class="m-0">Eminem</small>
+            <a id="trackLink">
+              <h5 id="trackTitle" class="m-0"></h5>
+            </a>
+            <a id="artistLink"><small id="trackArtist" class="m-0"></small></a>
           </div>
           <div class="d-flex align-items-center ms-2">
             <svg
@@ -490,11 +494,13 @@
                 d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7h1.6z"
               ></path>
             </svg>
+
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
               class="bi bi-play-circle-fill play-btn"
               viewBox="0 0 16 16"
+              id="playIcon"
             >
               <path
                 d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"
@@ -526,19 +532,17 @@
             </svg>
           </div>
           <div class="d-flex align-items-center justify-content-between gap-1">
-            <span class="starting-time inline">0:22</span>
-            <div id="player-bar"></div>
+            <span class="starting-time inline" id="startTime">0:00</span>
             <div
               class="progress"
               role="progressbar"
               aria-label="Basic example"
-              aria-valuenow="25"
               aria-valuemin="0"
               aria-valuemax="100"
             >
-              <div class="progress-bar" style="width: 25%"></div>
+              <div class="progress-bar transition" id="playerBar"></div>
             </div>
-            <span class="starting-time inline">3:47</span>
+            <span class="starting-time inline">0:30</span>
           </div>
         </div>
         <div id="playerSettingIcons" class="d-flex gap-3 align-items-center">
@@ -603,21 +607,8 @@
               d="M11.5 13.614a5.752 5.752 0 0 0 0-11.228v1.55a4.252 4.252 0 0 1 0 8.127v1.55z"
             ></path>
           </svg>
-
-          <!-- VOLUME-BAR -->
-          <div
-            id="volume-bar"
-            class="progress"
-            role="progressbar"
-            aria-label="Basic example"
-            aria-valuenow="25"
-            aria-valuemin="0"
-            aria-valuemax="100"
-            style="width: 100px"
-          >
-            <div class="progress-bar" style="width: 25%"></div>
-          </div>
-
+          <!-- volume bar -->
+          <input type="range" name="volume" id="audioProgressBar" class="form-range" />
           <!-- SVG MINIMIZE -->
           <svg
             data-encore-id="icon"
