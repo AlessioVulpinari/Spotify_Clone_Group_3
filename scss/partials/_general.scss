@@ -227,17 +227,20 @@ a:hover {
 #footer-style.smartphone svg:hover {
   transform: scale(1.1);
 }
-#footer-style.smartphone small, #footer-style.smartphone .small,
+#footer-style.smartphone small,
+#footer-style.smartphone .small,
 #footer-style.smartphone h5,
 #footer-style.smartphone .h5 {
   cursor: pointer;
 }
-#footer-style.smartphone small:hover, #footer-style.smartphone .small:hover,
+#footer-style.smartphone small:hover,
+#footer-style.smartphone .small:hover,
 #footer-style.smartphone h5:hover,
 #footer-style.smartphone .h5:hover {
   text-decoration: underline;
 }
-#footer-style.smartphone h5, #footer-style.smartphone .h5 {
+#footer-style.smartphone h5,
+#footer-style.smartphone .h5 {
   color: #f8f9fa;
 }
 #footer-style.smartphone .title-wrapper {
@@ -260,7 +263,8 @@ a:hover {
   animation-play-state: paused;
 }
 @keyframes title-animation {
-  0%, 20% {
+  0%,
+  20% {
     transform: translateX(0);
   }
   100% {
@@ -408,7 +412,7 @@ aside {
 }
 
 .height-300 {
-  height: 300px;
+  min-height: 330px;
 }
 
 .text-2 {
