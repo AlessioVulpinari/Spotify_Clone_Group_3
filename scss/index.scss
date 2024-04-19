@@ -1,30 +1,63 @@
 @import "./partials/bootstrap-overrides";
-a {
-  text-decoration: none;
-  color: inherit;
-}
-ul {
-  list-style: none;
-  color: inherit;
+@import "./partials/general";
+@import "./partials/navmobile";
+
+@media (max-width: 768px) {
+  .container,
+  .container-sm {
+    max-width: none;
+  }
+  main {
+    max-height: none;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: inherit;
+  }
+  #container {
+    min-height: 100vh;
+  }
 }
 #container {
+  display: flex;
+  overflow-x: hidden;
+  height: calc(100vh - 100px);
+  scroll-behavior: smooth;
+  overflow-y: auto;
+
+  header,
+  aside {
+    flex: 0 0 auto;
+  }
+
   header {
     min-width: 300px;
+    overflow-y: auto;
   }
 
   aside {
     min-width: 250px;
   }
+
+  main {
+    flex-grow: 1;
+    overflow-x: hidden;
+  }
 }
 
-.bg-green {
-  background-color: #004537;
+//scrollbar
+
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-.grey-text {
-  color: rgba(255, 255, 255, 0.6);
-  list-style: none;
+::-webkit-scrollbar-track {
+  background: transparent;
 }
-a:hover {
-  color: rgba(255, 255, 255, 1);
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff78;
+  border-radius: 100vh;
+  &:hover {
+    background-color: $light;
+  }
 }
