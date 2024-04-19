@@ -21,6 +21,10 @@ main {
   padding: 10px;
 }
 @media (max-width: 768px) {
+  .container,
+  .container-sm {
+    max-width: none;
+  }
   main {
     max-height: none;
     height: 100vh;
