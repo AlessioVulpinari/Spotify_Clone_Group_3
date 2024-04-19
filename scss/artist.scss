@@ -1,5 +1,6 @@
 @import "./partials/bootstrap-overrides";
 @import "./partials/general";
+@import "./partials/navmobile";
 
 #container {
   display: flex;
@@ -27,6 +28,21 @@
     overflow-x: hidden;
   }
 }
+
+@media (max-width: 768px) {
+    .container, .container-sm {
+        max-width: none;
+    }
+    main {
+      max-height: none;
+      height: 100vh;
+      overflow-y: auto;
+      background-color: inherit;
+    }
+    #container {
+      min-height: 100vh;
+    }
+  }
 
 #background {
   background-image: linear-gradient(transparent, $dark, $dark), url("/assets/imgs/main/image-4.jpg");

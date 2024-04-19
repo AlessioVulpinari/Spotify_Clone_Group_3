@@ -12128,14 +12128,6 @@ a:hover {
   color: #f8f9fa;
 }
 
-#playing-song {
-  width: 290px;
-}
-
-#playerSettingIcons {
-  width: 290px;
-}
-
 #footer-style.smartphone {
   display: flex;
   align-items: center;
@@ -12152,36 +12144,44 @@ a:hover {
   height: 60px;
   border: 1px solid #252525;
 }
+
 #footer-style.smartphone img {
   height: 60px;
   width: 60px;
   border-radius: 4px;
 }
+
 #footer-style.smartphone svg {
   height: 16px;
   width: 16px;
 }
+
 #footer-style.smartphone svg,
 #footer-style.smartphone img,
 #footer-style.smartphone .progress {
   cursor: pointer;
 }
+
 #footer-style.smartphone svg:hover {
   transform: scale(1.1);
 }
+
 #footer-style.smartphone small, #footer-style.smartphone .small,
 #footer-style.smartphone h5,
 #footer-style.smartphone .h5 {
   cursor: pointer;
 }
+
 #footer-style.smartphone small:hover, #footer-style.smartphone .small:hover,
 #footer-style.smartphone h5:hover,
 #footer-style.smartphone .h5:hover {
   text-decoration: underline;
 }
+
 #footer-style.smartphone h5, #footer-style.smartphone .h5 {
   color: #f8f9fa;
 }
+
 #footer-style.smartphone .title-wrapper {
   width: 100%;
   overflow: hidden;
@@ -12190,6 +12190,7 @@ a:hover {
   height: 100px;
   line-height: 100px;
 }
+
 #footer-style.smartphone .title-content {
   display: inline-block;
   position: absolute;
@@ -12198,9 +12199,11 @@ a:hover {
   will-change: transform;
   animation: title-animation 20s linear infinite;
 }
+
 #footer-style.smartphone .title-content:hover {
   animation-play-state: paused;
 }
+
 @keyframes title-animation {
   0%, 20% {
     transform: translateX(0);
@@ -12213,12 +12216,22 @@ a:hover {
   width: 25px;
   height: 25px;
 }
+
 #footer-style.smartphone .play-btn {
   width: 30px;
   height: 30px;
 }
+
 #footer-style.smartphone #playing-song {
   width: 100%;
+}
+
+#playing-song {
+  width: 290px;
+}
+
+#playerSettingIcons {
+  width: 290px;
 }
 
 .progress {
@@ -12274,7 +12287,11 @@ a:hover {
   color: #f8f9fa;
 }
 
-aside svg, aside img, aside h6, aside .h6, aside p {
+aside svg,
+aside img,
+aside h6,
+aside .h6,
+aside p {
   cursor: pointer;
 }
 aside svg {
@@ -12336,7 +12353,7 @@ aside .friends-activity span {
 }
 
 .transition {
-  transition: width 0.5s;
+  transition: width 1s linear;
 }
 
 .cursor-pointer {
