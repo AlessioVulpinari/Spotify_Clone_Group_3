@@ -12282,6 +12282,12 @@ h6, .h6 {
   max-width: 100%;
 }
 
+h6:hover, .h6:hover {
+  white-space: normal;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+}
+
 main {
   overflow-y: auto;
   padding: 10px;
