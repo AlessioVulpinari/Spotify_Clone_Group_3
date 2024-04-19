@@ -12189,7 +12189,11 @@ a:hover {
   color: #f8f9fa;
 }
 
-aside svg, aside img, aside h6, aside .h6, aside p {
+aside svg,
+aside img,
+aside h6,
+aside .h6,
+aside p {
   cursor: pointer;
 }
 aside svg {
@@ -12251,7 +12255,7 @@ aside .friends-activity span {
 }
 
 .transition {
-  transition: width 0.5s;
+  transition: width 1s linear;
 }
 
 .cursor-pointer {
@@ -12265,7 +12269,8 @@ aside .friends-activity span {
   scroll-behavior: smooth;
   overflow-y: auto;
 }
-#container header, #container aside {
+#container header,
+#container aside {
   flex: 0 0 auto;
 }
 #container header {
@@ -12456,13 +12461,20 @@ aside .friends-activity span {
 #tracklist-section .container #tracklist-cards .track-card:hover #substitute-play {
   fill: #f8f9fa;
 }
-#tracklist-section .container #tracklist-cards span, #tracklist-section .container #tracklist-cards h5, #tracklist-section .container #tracklist-cards .h5, #tracklist-section .container #tracklist-cards small, #tracklist-section .container #tracklist-cards .small, #tracklist-section .container #tracklist-cards a {
+#tracklist-section .container #tracklist-cards span,
+#tracklist-section .container #tracklist-cards h5,
+#tracklist-section .container #tracklist-cards .h5,
+#tracklist-section .container #tracklist-cards small,
+#tracklist-section .container #tracklist-cards .small,
+#tracklist-section .container #tracklist-cards a {
   margin: 0;
 }
 #tracklist-section .container #tracklist-cards .see-more {
   padding-left: 2rem;
 }
-#tracklist-section .container #tracklist-cards span, #tracklist-section .container #tracklist-cards h5, #tracklist-section .container #tracklist-cards .h5 {
+#tracklist-section .container #tracklist-cards span,
+#tracklist-section .container #tracklist-cards h5,
+#tracklist-section .container #tracklist-cards .h5 {
   font-weight: 600;
   font-size: 16px;
   color: #f8f9fa;
@@ -12486,7 +12498,10 @@ aside .friends-activity span {
 #tracklist-section .container #tracklist-cards .other-icon {
   fill: #f8f9fa;
 }
-#tracklist-section .container #tracklist-cards .card-active .number, #tracklist-section .container #tracklist-cards .card-active h5, #tracklist-section .container #tracklist-cards .card-active .h5, #tracklist-section .container #tracklist-cards .card-active i {
+#tracklist-section .container #tracklist-cards .card-active .number,
+#tracklist-section .container #tracklist-cards .card-active h5,
+#tracklist-section .container #tracklist-cards .card-active .h5,
+#tracklist-section .container #tracklist-cards .card-active i {
   color: #1DB954 !important;
 }
 
@@ -12532,7 +12547,7 @@ aside .friends-activity span {
   max-width: 100%;
 }
 
-#rec-card .card {
+.rec-card .card {
   border: none;
   color: #b2b2b2;
   background-color: transparent;
@@ -12540,31 +12555,31 @@ aside .friends-activity span {
   padding: 1rem 1rem 0;
   margin-bottom: 0.5rem;
 }
-#rec-card .card:hover {
+.rec-card .card:hover {
   background-color: #121212;
 }
-#rec-card .card:hover svg {
+.rec-card .card:hover svg {
   opacity: 1;
   transform: translateY(-5px);
 }
-#rec-card .card img {
+.rec-card .card img {
   border-radius: 8px;
   position: relative;
 }
-#rec-card .card svg {
+.rec-card .card svg {
   position: absolute;
   bottom: 85px;
   right: 20px;
   background-image: radial-gradient(circle at center, #121212 50%, transparent 11%);
   opacity: 0;
 }
-#rec-card .card .card-body {
+.rec-card .card .card-body {
   padding-block: 1rem;
   padding-left: 0;
   border-radius: 8px;
   background-color: transparent;
 }
-#rec-card .card .card-body h6, #rec-card .card .card-body .h6 {
+.rec-card .card .card-body h6, .rec-card .card .card-body .h6 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
@@ -12573,8 +12588,8 @@ aside .friends-activity span {
   text-overflow: ellipsis;
   max-width: 100%;
 }
-#rec-card #rec-cover {
-  border-radius: 50%;
+.rec-card .rec-cover {
+  border-radius: 50% !important;
 }
 
 ::-webkit-scrollbar {

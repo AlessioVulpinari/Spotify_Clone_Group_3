@@ -12189,7 +12189,11 @@ a:hover {
   color: #f8f9fa;
 }
 
-aside svg, aside img, aside h6, aside .h6, aside p {
+aside svg,
+aside img,
+aside h6,
+aside .h6,
+aside p {
   cursor: pointer;
 }
 aside svg {
@@ -12251,7 +12255,7 @@ aside .friends-activity span {
 }
 
 .transition {
-  transition: width 0.5s;
+  transition: width 1s linear;
 }
 
 .cursor-pointer {
