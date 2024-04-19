@@ -232,7 +232,7 @@
                 class="rounded-circle m-0"
                 style="width: 30px"
               />
-              <p class="mb-0">Username</p>
+              <p class="mb-0 d-none d-md-block">Username</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
@@ -257,14 +257,16 @@
         <div id="hero" class="mt-2">
           <div class="container">
             <div class="row">
-              <div class="col-4">
+              <div class="col-4 d-none d-sm-block">
                 <img src="assets/imgs/main/image-1.jpg" class="img-fluid" alt="" />
               </div>
               <div class="col-8 text-white">
                 <div class="d-flex flex-column">
                   <div class="d-flex justify-content-between">
                     <p>ALBUM</p>
-                    <button type="button" class="btn btn-ads">NASCONDI ANNUNCI</button>
+                    <button type="button" class="btn btn-ads d-none d-md-block">
+                      NASCONDI ANNUNCI
+                    </button>
                   </div>
                   <h1>VIOLA (feat. Salmo)</h1>
                   <p>Fedez, Salmo</p>
@@ -289,11 +291,17 @@
         <div>
           <div class="container text-white mt-2">
             <h3>Eminem</h3>
-            <div class="row row-cols-3 row-gap-3" id="horizontalCardContainer"></div>
+            <div
+              class="row row-cols-1 row-cols-xl-3 row-cols-lg-2 row-cols-sm-2 row-gap-3"
+              id="horizontalCardContainer"
+            ></div>
           </div>
         </div>
         <div class="container mt-4">
-          <div class="row row-cols-5 row-gap-3" id="verticalCardsContainer"></div>
+          <div
+            class="row row-cols-lg-4 row-cols-md-3 row-cols-3 row-gap-3"
+            id="verticalCardsContainer"
+          ></div>
         </div>
       </main>
       <aside class="bg-black d-none d-lg-block">
