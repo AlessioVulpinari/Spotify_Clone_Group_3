@@ -12272,6 +12272,16 @@ aside .friends-activity span {
   margin-top: 20px;
 }
 
+h6, .h6 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
 main {
   overflow-y: auto;
   padding: 10px;
