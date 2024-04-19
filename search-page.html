@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- Bootstrap Icon -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <!-- Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,6 +27,7 @@
     <link rel="stylesheet" href="assets/dist/css/search-page.min.css" />
   </head>
   <body class="bg-dark">
+    <audio id="audio-output"></audio>
     <div class="d-flex" id="container">
       <header class="bg-black d-none d-md-block">
         <nav id="navbar" class="container">
@@ -160,9 +158,7 @@
                   class="bi bi-bookmark-fill bg-green p-1"
                   viewBox="0 0 16 16"
                 >
-                  <path
-                    d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"
-                  />
+                  <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2" />
                 </svg>
                 I tuoi episodi
               </a>
@@ -176,8 +172,8 @@
               <a href="#" class="album-link">
                 <img src="assets/imgs/search/image-2.jpg" alt="album art" />
                 <div class="d-flex flex-column gap-1">
-                  <h5 id="trackTitle" class="m-0">Album</h5>
-                  <small id="trackArtist" class="m-0">Artist</small>
+                  <h5 class="m-0">Album</h5>
+                  <small class="m-0">Artist</small>
                 </div>
               </a>
             </li>
@@ -325,12 +321,7 @@
         <div class="d-flex justify-content-between align-items-center pt-2 ps-3">
           <h3 class="fs-6 text-light fw-bold m-0">Attività amici</h3>
           <div class="d-flex align-items-center justify-content-end gap-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              class="bi bi-person-add"
-              viewBox="0 0 16 16"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
               <path
                 d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
               />
@@ -338,13 +329,7 @@
                 d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"
               />
             </svg>
-            <svg
-              data-encore-id="icon"
-              role="img"
-              aria-hidden="true"
-              viewBox="0 0 16 16"
-              class="Svg-sc-ytk21e-0 dYnaPI"
-            >
+            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 dYnaPI">
               <path
                 d="M2.47 2.47a.75.75 0 0 1 1.06 0L8 6.94l4.47-4.47a.75.75 0 1 1 1.06 1.06L9.06 8l4.47 4.47a.75.75 0 1 1-1.06 1.06L8 9.06l-4.47 4.47a.75.75 0 0 1-1.06-1.06L6.94 8 2.47 3.53a.75.75 0 0 1 0-1.06Z"
               ></path>
@@ -443,9 +428,7 @@
     <div class="d-none d-md-block">
       <footer id="footer-style" class="container-fluid">
         <div id="playing-song" class="d-flex gap-3 align-items-center">
-          <a id="coverLink"
-            ><img src="assets/imgs/search/image-1.jpg" alt="album cover" id="trackCover"
-          /></a>
+          <a id="coverLink"><img src="assets/imgs/search/image-1.jpg" alt="album cover" id="trackCover" /></a>
           <div class="d-flex flex-column">
             <a id="trackLink">
               <h5 id="trackTitle" class="m-0"></h5>
@@ -453,12 +436,7 @@
             <a id="artistLink"><small id="trackArtist" class="m-0"></small></a>
           </div>
           <div class="d-flex align-items-center ms-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              class="bi bi-heart"
-              viewBox="0 0 16 16"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
               <path
                 d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
               />
@@ -533,13 +511,7 @@
           </div>
           <div class="d-flex align-items-center justify-content-between gap-1">
             <span class="starting-time inline" id="startTime">0:00</span>
-            <div
-              class="progress"
-              role="progressbar"
-              aria-label="Basic example"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            >
+            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuemin="0" aria-valuemax="100">
               <div class="progress-bar transition" id="playerBar"></div>
             </div>
             <span class="starting-time inline">0:30</span>
@@ -603,9 +575,7 @@
             <path
               d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 0 1 0 4.88z"
             ></path>
-            <path
-              d="M11.5 13.614a5.752 5.752 0 0 0 0-11.228v1.55a4.252 4.252 0 0 1 0 8.127v1.55z"
-            ></path>
+            <path d="M11.5 13.614a5.752 5.752 0 0 0 0-11.228v1.55a4.252 4.252 0 0 1 0 8.127v1.55z"></path>
           </svg>
           <!-- volume bar -->
           <input type="range" name="volume" id="audioProgressBar" class="form-range" />

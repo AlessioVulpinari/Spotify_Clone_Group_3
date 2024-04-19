@@ -5,15 +5,7 @@ function createStaticCards() {
     const colCard = document.createElement("div")
     colCard.classList.add("col-xl-3", "col-lg-4", "col-md-4", "col-sm-4", "col-6", "g-0")
     const card = document.createElement("div")
-    card.classList.add(
-      "card",
-      "static-card",
-      "m-2",
-      "bg-transparent",
-      "cardAnimation",
-      "grey-text",
-      "rounded-sm"
-    )
+    card.classList.add("card", "static-card", "m-2", "bg-transparent", "cardAnimation", "grey-text", "rounded-sm")
     const imgLink = document.createElement("a")
     const img = document.createElement("img")
     img.classList.add("img-fluid", "rounded-sm")
@@ -44,13 +36,13 @@ function search() {
       "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
     },
   })
-    .then(response => {
+    .then((response) => {
       if (!response.ok) {
         throw new Error("Unable to fetch product details")
       }
       return response.json()
     })
-    .then(data => {
+    .then((data) => {
       if (data && data.data && data.data.length > 0) {
         const results = data.data
         renderResults(results)
@@ -63,7 +55,7 @@ function search() {
         }
       }
     })
-    .catch(error => {
+    .catch((error) => {
       console.error("Error:", error)
     })
 }
@@ -84,7 +76,7 @@ function renderResults(results) {
 
   resultsContainer.innerHTML = ""
 
-  results.forEach(result => {
+  results.forEach((result) => {
     const colCard = document.createElement("div")
     colCard.classList.add("col-xl-3", "col-lg-4", "col-md-4", "col-sm-4", "col-6")
 
@@ -101,7 +93,22 @@ function renderResults(results) {
     card.appendChild(imgLink)
 
     const titleLink = document.createElement("a")
-    titleLink.href = `./album.html?id=${result.album.id}`
+    titleLink.classList.add("cursor-pointer")
+    titleLink.href = `#`
+
+    const albumInfo = {
+      preview: result.preview,
+      cover: result.album.cover_small,
+      songName: result.title,
+      artist: result.artist.name,
+      artistId: result.artist.id,
+      albumId: result.album.id,
+    }
+
+    titleLink.addEventListener("click", () => {
+      loadNewSong(albumInfo)
+    })
+
     titleLink.textContent = result.title
     const title = document.createElement("h5")
     title.appendChild(titleLink)
