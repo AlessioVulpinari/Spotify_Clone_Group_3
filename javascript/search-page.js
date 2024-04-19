@@ -86,7 +86,7 @@ function renderResults(results) {
 
   results.forEach(result => {
     const colCard = document.createElement("div")
-    colCard.classList.add("col-xl-2", "col-lg-4", "col-md-6")
+    colCard.classList.add("col-xl-3", "col-lg-4", "col-md-6")
 
     const card = document.createElement("div")
     card.classList.add("card", "formCard", "m-1", "bg-dark", "grey-text", "p-3")
