@@ -3,7 +3,7 @@ function createStaticCards() {
 
   for (let i = 1; i <= 47; i++) {
     const colCard = document.createElement("div")
-    colCard.classList.add("col-xl-3", "col-lg-4", "col-12", "g-0")
+    colCard.classList.add("col-xl-3", "col-lg-4", "col-md-4", "col-sm-4", "col-6", "g-0")
     const card = document.createElement("div")
     card.classList.add(
       "card",
@@ -86,7 +86,7 @@ function renderResults(results) {
 
   results.forEach(result => {
     const colCard = document.createElement("div")
-    colCard.classList.add("col-xl-3", "col-lg-4", "col-md-6")
+    colCard.classList.add("col-xl-3", "col-lg-4", "col-md-4", "col-sm-4", "col-6")
 
     const card = document.createElement("div")
     card.classList.add("card", "formCard", "m-1", "bg-dark", "grey-text", "p-3")
@@ -108,7 +108,7 @@ function renderResults(results) {
     card.appendChild(title)
 
     const artistLink = document.createElement("a")
-    artistLink.href = `./artist.html?id=${result.artist.id}` //da ricontrollare
+    artistLink.href = `./artist.html?id=${result.artist.id}`
     artistLink.textContent = result.artist.name
 
     const artistName = document.createElement("p")
