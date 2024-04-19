@@ -43,7 +43,8 @@ const displayAlbumDetails = function (album) {
 
   // Image container and image element
   const imgContainer = document.createElement('div')
-  imgContainer.className = 'col-3 p-0'
+  imgContainer.className =
+    'col-12 col-md-4 col-lg-3 p-0 d-flex justify-content-center'
   const albumArt = document.createElement('img')
   albumArt.src = album.cover_big
   albumArt.className = 'img-fluid'
@@ -53,7 +54,7 @@ const displayAlbumDetails = function (album) {
 
   // Wrapper for album details
   const detailWrapper = document.createElement('div')
-  detailWrapper.className = 'col-9 wrapper ps-2'
+  detailWrapper.className = 'col-12 col-md-8 col-lg-9 wrapper ps-2'
 
   const albumLabel = document.createElement('p')
   albumLabel.innerText = 'Album'
@@ -140,7 +141,7 @@ const displayAlbumDetails = function (album) {
       .map(
         (track, index) => `
         <div id="card-${index}" class="track-card d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center gap-md-3">
                 <div class="icon-container d-flex align-items-center justify-content-start">
                     <span class="number">${index + 1}</span>
                     <i class="bi bi-play-fill"></i>

@@ -27,10 +27,20 @@
   }
 }
 
-//background color needs to be dynamic
-// #background {
-//     background-image: linear-gradient(#8faec1, transparent, $dark) !important;
-// }
+@media (max-width: 768px) {
+    .container, .container-sm {
+        max-width: none;
+    }
+    main {
+      max-height: none;
+      height: 100vh;
+      overflow-y: auto;
+      background-color: inherit;
+    }
+    #container {
+      min-height: 100vh;
+    }
+  }
 
 #hero {
     margin-top: 3rem;
@@ -127,6 +137,34 @@
             font-weight: 600;
         }
     }
+}
+
+//tablet 
+@media (max-width: 768px) {
+    #hero {
+
+        #album-art {
+            border-radius: 4px;
+            width: 400px;
+        }
+
+    .title-wrapper {
+        height: 70px; 
+        line-height: 70px; 
+    }
+    .title-content {
+        animation: none;
+    }
+    h1 {
+        font-size: 50px;
+        font-weight: 800;
+        letter-spacing: -1px;
+        overflow: hidden;
+    }
+    p {
+        opacity: 0;
+    }
+  }
 }
 
 #tracklist-section {
@@ -266,6 +304,71 @@
         }
     }
 }
+
+//tablet 
+@media (max-width: 768px) {
+    #tracklist-section {
+    
+        background: transparent;
+        background-image: linear-gradient(transparent, $darker);
+        width: 100%;
+        
+        .container {
+            min-height: 100vh;
+            
+            svg {
+                cursor: pointer;
+                width: 25px;
+                fill: $mid-light;
+                transition: transform 0.2s ease-in-out;
+    
+                    &:hover{
+                    fill: $light;
+                    transform: scale(1.1);
+                    }
+                &.play-btn {
+                    fill: $primary;
+                    width: 50px;
+                }
+    
+            }
+
+                #tracklist-cards {
+
+                    margin-top: 2rem;
+             
+                     .track-card {
+                         padding-inline: 0;
+                         padding-block: 0.5rem;
+                         border-radius: 6px;
+                         position: relative;
+             
+                         &:hover {
+                             background-color: transparent
+                         } 
+                         &:active{
+                            background-color: $darker;
+                         }
+                     }
+                     svg, i, span {
+                         display: none;
+                     }
+                     a:hover {
+                        text-decoration: none;
+                     }
+
+                 }
+             
+            
+        }
+    }
+}
+            
+        
+    
+    
+    
+
 
 ::-webkit-scrollbar {
     width: 5px;

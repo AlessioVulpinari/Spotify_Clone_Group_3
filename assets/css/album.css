@@ -12280,6 +12280,20 @@ aside .friends-activity span {
   overflow-x: hidden;
 }
 
+@media (max-width: 768px) {
+  .container, .container-sm {
+    max-width: none;
+  }
+  main {
+    max-height: none;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: inherit;
+  }
+  #container {
+    min-height: 100vh;
+  }
+}
 #hero {
   margin-top: 3rem;
   color: #f8f9fa;
@@ -12363,6 +12377,28 @@ aside .friends-activity span {
   font-weight: 600;
 }
 
+@media (max-width: 768px) {
+  #hero #album-art {
+    border-radius: 4px;
+    width: 400px;
+  }
+  #hero .title-wrapper {
+    height: 70px;
+    line-height: 70px;
+  }
+  #hero .title-content {
+    animation: none;
+  }
+  #hero h1, #hero .h1 {
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    overflow: hidden;
+  }
+  #hero p {
+    opacity: 0;
+  }
+}
 #tracklist-section {
   background-color: rgba(0, 0, 0, 0.6470588235);
   border-radius: 6px;
@@ -12485,6 +12521,51 @@ aside .friends-activity span {
   color: #1DB954 !important;
 }
 
+@media (max-width: 768px) {
+  #tracklist-section {
+    background: transparent;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6470588235));
+    width: 100%;
+  }
+  #tracklist-section .container {
+    min-height: 100vh;
+  }
+  #tracklist-section .container svg {
+    cursor: pointer;
+    width: 25px;
+    fill: #b2b2b2;
+    transition: transform 0.2s ease-in-out;
+  }
+  #tracklist-section .container svg:hover {
+    fill: #f8f9fa;
+    transform: scale(1.1);
+  }
+  #tracklist-section .container svg.play-btn {
+    fill: #1DB954;
+    width: 50px;
+  }
+  #tracklist-section .container #tracklist-cards {
+    margin-top: 2rem;
+  }
+  #tracklist-section .container #tracklist-cards .track-card {
+    padding-inline: 0;
+    padding-block: 0.5rem;
+    border-radius: 6px;
+    position: relative;
+  }
+  #tracklist-section .container #tracklist-cards .track-card:hover {
+    background-color: transparent;
+  }
+  #tracklist-section .container #tracklist-cards .track-card:active {
+    background-color: rgba(0, 0, 0, 0.6470588235);
+  }
+  #tracklist-section .container #tracklist-cards svg, #tracklist-section .container #tracklist-cards i, #tracklist-section .container #tracklist-cards span {
+    display: none;
+  }
+  #tracklist-section .container #tracklist-cards a:hover {
+    text-decoration: none;
+  }
+}
 ::-webkit-scrollbar {
   width: 5px;
 }
